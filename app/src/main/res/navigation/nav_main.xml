@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.witsclassdevelopment.ui.home.HomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_recent"
+        android:name="com.witsclassdevelopment.ui.recent.RecentFragment"
+        android:label="@string/title_recently_watched"
+        tools:layout="@layout/fragment_recent" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.witsclassdevelopment.ui.profile.ProfileFragment"
+        android:label="@string/title_profile_details"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_help"
+        android:name="com.witsclassdevelopment.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/navigation_support"
+        android:name="com.witsclassdevelopment.ui.support.SupportFragment"
+        android:label="@string/title_support"
+        tools:layout="@layout/fragment_support" />
+
+    <fragment
+        android:id="@+id/chapterFragment"
+        android:name="com.witsclassdevelopment.ui.chapter.ChapterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_chapter" />
+    <fragment
+        android:id="@+id/topicFragment"
+        android:name="com.witsclassdevelopment.ui.topic.TopicFragment"
+        android:label=""
+        tools:layout="@layout/fragment_topic" />
+
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.witsclassdevelopment.ui.home.exam.ExamFragment"
+        android:label=""
+        tools:layout="@layout/fragment_exam" />
+
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.witsclassdevelopment.ui.home.subject.SubjectFragment"
+        android:label=""
+        tools:layout="@layout/fragment_subject" />
+
+    <fragment
+        android:id="@+id/singleExamFragment"
+        android:name="com.witsclassdevelopment.ui.home.exam.modelExam.SingleExamFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_exam" />
+
+    <fragment
+        android:id="@+id/singleExamResultFragment"
+        android:name="com.witsclassdevelopment.ui.home.exam.modelExam.ExamResultFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_exam_result" />
+
+    <fragment
+        android:id="@+id/liveClassBatchFragment"
+        android:name="com.witsclassdevelopment.ui.home.subject.batch.LiveClassBatchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_batch" />
+
+    <fragment
+        android:id="@+id/liveClassesFragment"
+        android:name="com.witsclassdevelopment.ui.home.subject.batch.liveClasses.LiveClassesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_classes" />
+
+    <fragment
+        android:id="@+id/recordedClassesSubjectFragment"
+        android:name="com.witsclassdevelopment.ui.home.recordedClasses.RecordedClassesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_recorded_classes" />
+
+    <fragment
+        android:id="@+id/jobUpdateFragment"
+        android:name="com.witsclassdevelopment.ui.home.jobupdates.JobUpdatesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_job_updates" />
+
+    <fragment
+        android:id="@+id/jobUpdateDetailsFragment"
+        android:name="com.witsclassdevelopment.ui.home.jobupdates.jobUpdateDetails.JobUpdatesDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_job_update_details" />
+
+    <fragment
+        android:id="@+id/demoVideoFragment"
+        android:name="com.witsclassdevelopment.ui.home.demoVideo.DemoVideoFragment"
+        android:label=""
+        tools:layout="@layout/fragment_demo_videos" />
+    <fragment
+        android:id="@+id/studyMaterialFragment"
+        android:name="com.witsclassdevelopment.ui.home.subject.material.MaterialFragment"
+        android:label=""
+        tools:layout="@layout/fragment_material" />
+
+    <fragment
+        android:id="@+id/newsEventFragment"
+        android:name="com.witsclassdevelopment.ui.home.newsevents.NewsEventsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_news_events" />
+
+    <fragment
+        android:id="@+id/newsEventDetailsFragment"
+        android:name="com.witsclassdevelopment.ui.home.newsevents.newsDetails.NewsEventsDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_news_event_details" />
+
+    <fragment android:id="@+id/navigation_account"
+        android:name="com.witsclassdevelopment.ui.account.AccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_account"/>
+
+    <fragment android:id="@+id/fee_payment_mode_of_payment"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.FeePaymentModeOfStudyFragment"
+        android:label=""
+        tools:layout="@layout/fragment_fee_payment_mode_of_study"/>
+
+    <fragment android:id="@+id/study_center"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.StudyCenterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_study_center"/>
+
+    <fragment android:id="@+id/fee_structure"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.FeeStructureFragment"
+        android:label=""
+        tools:layout="@layout/fragment_fee_structure"/>
+
+    <fragment android:id="@+id/payment_order_bill"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.orderBill.PaymentOrderBillFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_order_bill"/>
+
+    <fragment android:id="@+id/fee_payment"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.FeePaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_fee_payment"/>
+
+    <fragment android:id="@+id/part_payment_list"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.partPayment.PartPaymentListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_part_payment"/>
+
+    <fragment android:id="@+id/part_payment_order_bill"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.partPayment.partPaymentOrderBill.PartPaymentOrderBillFragment"
+        android:label=""
+        tools:layout="@layout/fragment_part_payment_order_bill"/>
+
+    <fragment android:id="@+id/payment_success_screen"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.PaymentSuccessFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_success"/>
+
+    <fragment android:id="@+id/payment_failed_screen"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.feePaymentModeOfStudy.modeOfPayment.feeStructure.PaymentFailedFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_failed"/>
+
+    <fragment android:id="@+id/payment_history"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.paymentHistory.PaymentHistoryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_history"/>
+
+    <fragment android:id="@+id/packageListingPartPay"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.partPayment.PackageListingParPayFragment"
+        android:label=""
+        tools:layout="@layout/fragment_package_listing_part_payment"/>
+
+    <fragment android:id="@+id/navigation_analytics"
+        android:name="com.witsclassdevelopment.ui.home.analytics.AnalyticsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_analytics"/>
+
+    <fragment android:id="@+id/activeSubscriptionFragment"
+        android:name="com.witsclassdevelopment.ui.home.feePayment.getActiveSubscription.ActiveSubscriptionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_active_subscription"/>
+
+    <fragment android:id="@+id/classRoomCategoryFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.ClassRoomCategoryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_class_room_category"/>
+
+    <fragment android:id="@+id/chapterWiseStudyNotesFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.ChapterWiseStudyNotesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_chapter_wise_study_notes"/>
+
+    <fragment android:id="@+id/descriptQuestionAnsFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.descriptiveQuesAns.DescrptiveQuesAnsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_descriptive_quest_ans"/>
+
+    <fragment android:id="@+id/classQuizFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.quiz.ClassQuizFragment"
+        android:label=""
+        tools:layout="@layout/fragment_class_quiz"/>
+
+    <fragment android:id="@+id/classQuizSingleFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.quiz.quizExam.ClassSingleQuizFragment"
+        android:label=""
+        tools:layout="@layout/fragment_class_single_quiz">
+        <action
+            android:id="@+id/action_quizListFragment_to_successFragment"
+            app:destination="@id/quizSuccessFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/classQuizFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment android:id="@+id/quizSuccessFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.quiz.quizExam.QuizSuccessFragment"
+        android:label=""
+        tools:layout="@layout/fragment_quiz_success">
+        <argument
+            android:name="message"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="score_text"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="result"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="chapterId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment android:id="@+id/scholarshipExamsListFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.ScholarshipExamsListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarships_list"/>
+
+    <fragment android:id="@+id/scholarshipRegisterFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.register.ScholarshipRegisterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarship_register"/>
+
+    <fragment android:id="@+id/scholarshipRegisterDetailsDisplayFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.register.ScholarshipRegisterDetailsDisplayFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarship_register_details_display">
+        <action
+            android:id="@+id/action_scholarshipRegisterDetailsDisplayFragment_to_navigationHomeFragment"
+            app:destination="@id/scholarshipStartExamFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/scholarshipRegisterFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment android:id="@+id/scholarshipStartExamFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.register.exam.ScholarshipStartExamFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarship_start_exam">
+        <argument
+            android:name="enrollmentId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="examId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+
+        <action
+            android:id="@+id/action_scholarshipStartExamFragment_to_navigationScholarshipExamList"
+            app:destination="@id/ScholarshipExamResultFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/scholarshipStartExamFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment android:id="@+id/ScholarshipExamResultFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.register.exam.scholarshipExamResult.ScholarshipExamResultFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarship_exam_result">
+        <argument
+            android:name="result"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="message"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="score_text"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="enrollmentId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="examId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+
+        <action
+            android:id="@+id/action_scholarshipStartExamFragment_to_navigationScholarshipExamList"
+            app:destination="@id/scholarshipRedeemSuccessfullFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/scholarshipStartExamFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment android:id="@+id/scholarshipRedeemSuccessfullFragment"
+        android:name="com.witsclassdevelopment.ui.home.scholarship.register.exam.scholarshipExamResult.ScholarshipRedeemSuccessFullFragment"
+        android:label=""
+        tools:layout="@layout/fragment_scholarship_redeem_successfull"/>
+
+    <fragment android:id="@+id/quizReportsFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.quiz.report.QuizReportsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_quiz_reports"/>
+
+    <fragment android:id="@+id/singleQuizReportFragment"
+        android:name="com.witsclassdevelopment.ui.home.classroomCategory.quiz.report.singleQuizReport.SingleQuizReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_quiz_report"/>
+
+    <fragment android:id="@+id/demoClassSubjectFragment"
+        android:name="com.witsclassdevelopment.ui.home.subject.demoClass.DemoClassFragment"
+        android:label=""
+        tools:layout="@layout/fragment_demo_class"/>
+
+    <fragment android:id="@+id/allSubscriptionListFragment"
+        android:name="com.witsclassdevelopment.ui.home.allSubscription.AllSubscriptionListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_all_subscription_list"/>
+
+    <fragment android:id="@+id/allSubscriptionListDetailsFragment"
+        android:name="com.witsclassdevelopment.ui.home.allSubscription.subscriptionDetails.AllSubscriptionListDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_all_subsciption_list_details">
+        <action
+            android:id="@+id/action_scholarshipDetailsFragmentSucess_to_navigationHome"
+            app:destination="@id/payment_success_screen"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/allSubscriptionListFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_scholarshipDetailsFragmentFail_to_navigationHome"
+            app:destination="@id/payment_failed_screen"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/allSubscriptionListFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment android:id="@+id/enteranceExamQuestionTypeFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.EnteranceExamQuestionTypeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enterance_exam_question_type">
+
+        <action
+            android:id="@+id/action_enteranceExamQuestionTypeFragment_to_navigationEnteranceReport"
+            app:destination="@id/enteranceReportsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment android:id="@+id/enteranceStartExamFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.startExam.EnteranceStartExamFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enterance_start_exam">
+
+        <argument
+            android:name="exam_id"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+
+        <action
+            android:id="@+id/action_enteranceStartExamFragment_to_navigationEnteranceExamList"
+            app:destination="@id/EnteranceExamResultFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/enteranceStartExamFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment android:id="@+id/EnteranceExamResultFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.startExam.EnteranceExamResultFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enterance_exam_result">
+        <argument
+            android:name="result"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="message"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="score_text"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="enrollmentId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+        <argument
+            android:name="examId"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue=""/>
+
+        <action
+            android:id="@+id/action_enteranceStartExamFragment_to_navigationEnteranceReport"
+            app:destination="@id/enteranceReportsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment android:id="@+id/enteranceReportsFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.report.EnteranceExamReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enterance_reports"/>
+
+    <fragment android:id="@+id/singleEnteranceReportFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.report.single.SingleEnteranceReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_enternace_report"/>
+
+    <fragment android:id="@+id/currentAffairsFragment"
+        android:name="com.witsclassdevelopment.ui.home.currentAffairs.CurrentAffairsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_current_affairs"/>
+
+    <fragment android:id="@+id/currentAffairsByGroupFragment"
+        android:name="com.witsclassdevelopment.ui.home.currentAffairs.byGroup.CurrentAffairsByGroupFragment"
+        android:label=""
+        tools:layout="@layout/fragment_current_affairs_by_group"/>
+
+    <fragment android:id="@+id/currentAffairsDetailsFragment"
+        android:name="com.witsclassdevelopment.ui.home.currentAffairs.byGroup.byGroupDetails.CurrentAffairsDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_current_affairs_details"/>
+
+    <fragment android:id="@+id/examReportFragment"
+        android:name="com.witsclassdevelopment.ui.home.exam.report.ExamReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_exam_report"/>
+
+    <fragment android:id="@+id/singleExamReportFragment"
+        android:name="com.witsclassdevelopment.ui.home.exam.report.single.SingleExamReportFragment"
+        android:label=""
+        tools:layout="@layout/fragment_single_exam_report"/>
+
+    <fragment android:id="@+id/answerKeyFragment"
+        android:name="com.witsclassdevelopment.ui.home.enteranceExam.answerKey.EnteranceExamAnswerKeyFragment"
+        android:label=""
+        tools:layout="@layout/fragment_enterance_exam_answer_key"/>
+
+    <fragment android:id="@+id/fragmentProbableQAGroup"
+        android:name="com.witsclassdevelopment.ui.home.probableQA.ProbableQAGroupFragment"
+        android:label=""
+        tools:layout="@layout/fragment_probable_qa_group"/>
+
+    <fragment android:id="@+id/fragmentQAAnswerKey"
+        android:name="com.witsclassdevelopment.ui.home.probableQA.answerKey.QAAnswerKeyFragment"
+        android:label=""
+        tools:layout="@layout/fragment_qa_answer_key"/>
+
+    <fragment android:id="@+id/fragmentImportantLinks"
+        android:name="com.witsclassdevelopment.ui.home.importantLink.ImportantLinksFragment"
+        android:label=""
+        tools:layout="@layout/fragment_important_links"/>
+
+    <fragment android:id="@+id/fragmentPreviousyearQuestionPaper"
+        android:name="com.witsclassdevelopment.ui.home.previousYearQuestionPaper.PreviousYearQuestionPaperFragment"
+        android:label=""
+        tools:layout="@layout/fragment_previous_year_question_papers"/>
+
+    <fragment android:id="@+id/fragmentFlashCardGroup"
+        android:name="com.witsclassdevelopment.ui.home.flashCard.FlashCardGroupFragment"
+        android:label=""
+        tools:layout="@layout/fragment_flash_card_group"/>
+
+    <fragment android:id="@+id/fragmentFlashCardItems"
+        android:name="com.witsclassdevelopment.ui.home.flashCard.flashCardItems.FlashCardItemsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_flash_card_items"/>
+
+    <fragment android:id="@+id/academicLevelsFragment"
+        android:name="com.witsclassdevelopment.ui.home.accadamicStreamSwitch.AcadamicStreamSwitchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_acadamic_stream_switch">
+        <action
+            android:id="@+id/action_academicLevelsFragment_to_academicStreamSuccessFragment"
+            app:destination="@id/academicStreamSuccessFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment android:id="@+id/academicStreamSuccessFragment"
+        android:name="com.witsclassdevelopment.ui.home.accadamicStreamSwitch.AcadamicStreamSuccessfullFragment"
+        android:label=""
+        tools:layout="@layout/fragment_acadamic_stream_success_screan">
+        <action
+            android:id="@+id/action_academicLevelsFragment_to_home"
+            app:destination="@id/navigation_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/academicStreamSuccessFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+</navigation>

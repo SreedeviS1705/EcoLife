@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Future" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryDark">@color/teal_200</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@color/teal_200</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="noAnimTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryDark">@color/teal_200</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@color/teal_200</item>
+    </style>
+
+</resources>

@@ -1,0 +1,2769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_screen_background_gradient_clr"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="visible"
+                android:id="@+id/homeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sliderContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.github.islamkhsh.CardSliderViewPager
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        app:auto_slide_time="3"
+                        app:cardSlider_indicator="@id/indicator"
+                        app:cardSlider_pageMargin="12dp"
+                        app:cardSlider_smallScaleFactor="0.9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.islamkhsh.CardSliderIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:indicatorsToShow="5"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_slider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sliderContainer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/blue_circle_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/library_img"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Library"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout6"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/green_circle_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout7"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5">
+
+                        <ImageView
+                            android:layout_width="43dp"
+                            android:layout_height="43dp"
+                            android:src="@drawable/exam_img"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Exam"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/red_circle_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout8"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/audio_book"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Audio Books"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/yellow_circle_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:src="@drawable/analytics_img"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Analytics"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layout_collapseMode="parallax"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sliderContainer">
+
+
+                    <TextView
+                        android:id="@+id/explore"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="37dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Dive into our services"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/subjectRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/explore"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:spanCount="2" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="103dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/blue_700"
+                        android:text="See All"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectRecyclerView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/button_bg">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See All"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                    <ImageView
+                        android:id="@+id/newsMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/ic_dots_menu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/news_and_events"
+                        android:textAppearance="@style/MainTitle"
+                        app:layout_constraintBottom_toBottomOf="@+id/newsMenu"
+                        app:layout_constraintStart_toEndOf="@+id/newsMenu"
+                        app:layout_constraintTop_toTopOf="@+id/newsMenu" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/newsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/news" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/featureContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/demoClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="42dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/liveClass"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/demo_class"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:gravity="center"
+                                android:text="Demo Class"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/liveClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="42dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/studyMaterials"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/demoClass"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/liveClassLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/live_class"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:gravity="center"
+                                android:text="Live Class"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/studyMaterials"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="42dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/liveClass"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/studyMaterialLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/study_aterials"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Study Materials"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/exams"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/feePayment"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/ExamLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView12"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/exam"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Exams"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recordedClasses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/feePayment"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/RecordedClassLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/recorded_classes"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Recorded Class"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/feePayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/recordedClasses"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/exams"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/FeeAndPaymentLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/fees_payment_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:gravity="center"
+                                android:text="Fee &amp; Payment"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/jobUpdated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/analyticsCard"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/imageView14"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/chat_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Quick support"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/newsFeeds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/analyticsCard"
+                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/imageView15"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="29dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="30dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/newsfeeds"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="News/Feeds"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/analyticsCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginBottom="29dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/newsFeeds"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toEndOf="@+id/jobUpdated"
+                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="112dp">
+
+                            <ImageView
+                                android:id="@+id/AnalyticsLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView24"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/analytics_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Analytics"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/featureContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/offerContainer">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/classRooms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/scholershipId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/classRoomLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/RecordedClassLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/class_room_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Smart Class:\nAdvanced"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/scholershipId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/ExaminationId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/classRooms"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/talentExamLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/scholershipIdLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/scholershipIdimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/scholership_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Scolarship:\nMCQ"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/scholershipIdimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/textView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="-40"
+                        android:text="Coming Soon!"
+                        android:textColor="#E11000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ExaminationId"
+                        app:layout_constraintEnd_toEndOf="@+id/ExaminationId"
+                        app:layout_constraintStart_toStartOf="@+id/ExaminationId"
+                        app:layout_constraintTop_toTopOf="@+id/ExaminationId" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/ExaminationId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/scholershipId"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/examinationLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ExaminationIdLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/ExaminationIdimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/exam_iccc"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Standard:\nMCQ"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/ExaminationIdimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/textView99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="-40"
+                        android:text="Coming Soon!"
+                        android:textColor="#E11000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/entrancePracticeId"
+                        app:layout_constraintEnd_toEndOf="@+id/entrancePracticeId"
+                        app:layout_constraintStart_toStartOf="@+id/entrancePracticeId"
+                        app:layout_constraintTop_toBottomOf="@+id/classRooms" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/entrancePracticeId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/studyNotesId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/classRooms"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/enteranceExamLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/entrancePracticeLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/entrancePracticeimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/examination_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Enterance\nPractice"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/entrancePracticeimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="-40"
+                        android:text="Coming Soon!"
+                        android:textColor="#E11000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/studyNotesId"
+                        app:layout_constraintEnd_toEndOf="@+id/studyNotesId"
+                        app:layout_constraintStart_toStartOf="@+id/studyNotesId"
+                        app:layout_constraintTop_toBottomOf="@+id/scholershipId" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/studyNotesId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/probableQuestionsId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/entrancePracticeId"
+                        app:layout_constraintTop_toBottomOf="@+id/scholershipId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/probableAQLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/studyNotesLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/studyNotesimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/probable_qa_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Probable \nQA"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/studyNotesimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/probableQuestionsId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/studyNotesId"
+                        app:layout_constraintTop_toBottomOf="@+id/ExaminationId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/studyNotessLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/probableQuestionsLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/probableQuestionsimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/probable_qestions_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Study \nMaterials"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/probableQuestionsimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="-40"
+                        android:text="Coming Soon!"
+                        android:textColor="#E11000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/currentAffairsId"
+                        app:layout_constraintEnd_toEndOf="@+id/currentAffairsId"
+                        app:layout_constraintStart_toStartOf="@+id/currentAffairsId"
+                        app:layout_constraintTop_toTopOf="@+id/currentAffairsId" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/liveClassContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="@+id/entrancePracticeId"
+                        app:layout_constraintEnd_toStartOf="@+id/currentAffairsId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/entrancePracticeId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/liveClasssLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/liveClassimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/live_class_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Live Class\n Batch wise"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/liveClassimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/didYouKnowWhyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/button_bg"
+                        android:visibility="gone"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClassContainer">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/didYouKnowLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:text="Did you know ?"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView34"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView34"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView34" />
+
+                            <ImageView
+                                android:id="@+id/imageView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/did_you_know_card_ic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/currentAffairsId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/importantLinksId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/liveClassContainer"
+                        app:layout_constraintTop_toBottomOf="@+id/studyNotesId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/currentAffairsLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/currentAffairsimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/current_affairs_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Current\nAffairs"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/currentAffairsimageView11"
+                                app:layout_constraintVertical_bias="0.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rotation="-40"
+                        android:text="Coming Soon!"
+                        android:textColor="#E11000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/importantLinksId"
+                        app:layout_constraintEnd_toEndOf="@+id/importantLinksId"
+                        app:layout_constraintStart_toStartOf="@+id/importantLinksId"
+                        app:layout_constraintTop_toTopOf="@+id/importantLinksId" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/importantLinksId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/currentAffairsId"
+                        app:layout_constraintTop_toBottomOf="@+id/probableQuestionsId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/importantLinksLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/importantLinksimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/important_link_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Important \nLinks"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/importantLinksimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/askDoubtId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/descriptiveQA"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClassContainer"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/feedBackLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/askDoubtLockIc"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/askDoubtimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ask_doubt_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Feedback \n"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/askDoubtimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/descriptiveQA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/newAndEvents"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/askDoubtId"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClassContainer"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/descriptiveQALockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/descriptiveQAimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/study_notes_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Descriptive \nQA"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/descriptiveQAimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/newAndEvents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/descriptiveQA"
+                        app:layout_constraintTop_toBottomOf="@+id/importantLinksId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/newsAndEventsLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/newsAndEventsimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/news_feeds_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="News\nFeeds"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/newsAndEventsimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/jobUpdatesId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/analyticsId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/askDoubtId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/jobUpdatesLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/jobUpdatesimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/job_updates_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Job \nUpdates"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/jobUpdatesimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/analyticsId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/subscriptionTenureSystemId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/jobUpdatesId"
+                        app:layout_constraintTop_toBottomOf="@+id/descriptiveQA"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/analyticsLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/analyticsimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/analytics_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Analytics \n"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/analyticsimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/subscriptionTenureSystemId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/analyticsId"
+                        app:layout_constraintTop_toBottomOf="@+id/descriptiveQA"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/subscriptionTenureSystemLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/subscriptionTenureSystemimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/subscription_tenure_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Subsciption \nTenure sys"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/subscriptionTenureSystemimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/paymentHistoryId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/profileHomeId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/jobUpdatesId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/paymentHistoryLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/paymentHistoryimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/job_updates_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Payment \nHistory"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/paymentHistoryimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/profileHomeId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/supportHomeId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/paymentHistoryId"
+                        app:layout_constraintTop_toBottomOf="@+id/jobUpdatesId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/profileHomeLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/profileHomeimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/profile_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Profile \n"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/profileHomeimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/supportHomeId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/profileHomeId"
+                        app:layout_constraintTop_toBottomOf="@+id/jobUpdatesId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/supportHomeLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/supportHomeimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/support_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Support \n"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/supportHomeimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:visibility="gone"
+                        android:id="@+id/audioClassId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/profileHomeId"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/paymentHistoryId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/audioClassLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/audioClassimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/audio_class_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Audio \nClass"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/audioClassimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/switchAcadamicStreamId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:outlineAmbientShadowColor="@color/blue_200"
+                        android:outlineSpotShadowColor="@color/blue_200"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/paymentHistoryId"
+                        app:layout_constraintTop_toBottomOf="@+id/paymentHistoryId"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:minHeight="102dp">
+
+                            <ImageView
+                                android:id="@+id/switchAcadamicStreamLockIc"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:src="@drawable/home_feature_lock_ic"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <ImageView
+                                android:id="@+id/switchAcadamicStreamimageView11"
+                                android:layout_width="55dp"
+                                android:layout_height="58dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="2dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/switch_acadamic_str_home_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Switch  \nAcadamic stm"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/switchAcadamicStreamimageView11"
+                                app:layout_constraintVertical_bias="1.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/offerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/button_bg"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sliderContainer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView85"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="Explore our \ndemo classes"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView345"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="40dp"
+                            android:src="@drawable/demo_clas_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView85"
+                            app:layout_constraintStart_toEndOf="@+id/textView85"
+                            app:layout_constraintTop_toTopOf="@+id/textView85" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/video_home_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView85"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView85" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/previousQuestionPaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/button_bg"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/featureContainer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView855"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="Previous year \nquestion paper"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/previous_year_question_paper"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView855"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView855" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/subscrSuppAnalyContainerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="#DC8377"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/previousQuestionPaper">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rotation="-40"
+                            android:text="Coming Soon!"
+                            android:textColor="#E11000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/cardView6"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                            app:layout_constraintStart_toStartOf="@+id/cardView6"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.65999997" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/black"
+                            android:id="@+id/cardView6"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardView7"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/subscription_ic" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Subscriptions"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+                            app:layout_constraintStart_toStartOf="@+id/cardView6"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/black"
+                            android:id="@+id/cardView7"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cardView8"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/cardView6"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/support_ic" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Support"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView7"
+                            app:layout_constraintStart_toStartOf="@+id/cardView7"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rotation="-40"
+                            android:text="Coming Soon!"
+                            android:textColor="#E11000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/cardView8"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView8"
+                            app:layout_constraintStart_toStartOf="@+id/cardView8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.65999997" />
+                        <com.google.android.material.card.MaterialCardView
+                            app:strokeWidth="1dp"
+                            app:strokeColor="@color/black"
+                            android:id="@+id/cardView8"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/cardView7"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/analytics_ic" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Analytics"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="@+id/cardView8"
+                            app:layout_constraintStart_toStartOf="@+id/cardView8"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/constraintLayout12"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subscrSuppAnalyContainerId">
+
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="61dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/newsupdates_ic"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/top_border"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/grey_dark"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView18"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView33"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/red_square_ic"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/updateRecyclerview"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/bottom_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView33"
+                        app:layout_constraintTop_toBottomOf="@+id/top_border" />
+
+                    <TextView
+                        android:id="@+id/bottom_border"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_dark"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/homeProgressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/layout_news_detail" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

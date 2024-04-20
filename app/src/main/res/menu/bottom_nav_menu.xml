@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/navigation_recent"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="@string/title_recently_watched" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_profile_details" />
+
+    <!--<item
+        android:id="@+id/navigation_help"
+        android:icon="@drawable/ic_chatting"
+        android:title="@string/title_help" />-->
+
+    <!--<item
+        android:id="@+id/navigation_analytics"
+        android:icon="@drawable/analytics"
+        android:title="@string/analytics_text" />-->
+
+</menu>

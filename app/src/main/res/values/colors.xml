@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_200">#CB3623</color>
+    <color name="light_red">#F8B2A9</color>
+    <color name="blue_500">#CB3623</color>
+    <color name="blue_700">#CB3623</color>
+    <color name="teal_200">#CB3623</color>
+    <color name="teal_700">#CB3623</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#BBBBBB</color>
+    <color name="grey_dark">#8F8F8F</color>
+    <color name="grey_very_dark">#6A6A6A</color>
+    <color name="button_bg">#CB3623</color>
+    <color name="text_color">#CB3623</color>
+    <color name="text_blue">#CB3623</color>
+    <color name="text_green">#0F8C05</color>
+    <color name="pass">#CDFACA</color>
+    <color name="fail">#F61100</color>
+    <color name="light_green">#36B19D</color>
+</resources>

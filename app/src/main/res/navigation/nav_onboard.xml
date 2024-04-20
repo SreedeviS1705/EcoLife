@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_onboard"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.witsclassdevelopment.ui.welcome.WelcomeFragment"
+        android:label="@string/welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.witsclassdevelopment.ui.signin.SignInFragment"
+        android:label="@string/sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+
+        <action
+            android:id="@+id/action_siginFragment_to_navigatioOtpScreen"
+            app:destination="@id/verifyOTPFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOTPFragment"
+        android:name="com.witsclassdevelopment.ui.verifyotp.VerifyOTPFragment"
+        android:label="@string/otp_verification"
+        tools:layout="@layout/fragment_verify_otp" >
+
+
+        <argument
+            android:name="otpRef"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue="-1"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/parentDetailsFragment"
+        android:name="com.witsclassdevelopment.ui.signup.ParentDetailsFragment"
+        android:label="@string/create_account"
+        tools:layout="@layout/fragment_general_details" />
+    <fragment
+        android:id="@+id/generalDetailFragment"
+        android:name="com.witsclassdevelopment.ui.signup.GeneralDetailFragment"
+        android:label="@string/create_account"
+        tools:layout="@layout/fragment_parent_details" />
+
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.witsclassdevelopment.ui.signup.GetStartFragment"
+        android:label="Get Started"
+        tools:layout="@layout/get_start_fragment" />
+
+</navigation>

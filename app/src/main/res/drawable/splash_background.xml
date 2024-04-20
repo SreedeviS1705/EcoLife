@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!-- <item android:drawable="@drawable/bg_gradient"/>-->
+    <item >
+        <shape>
+            <solid android:color="#F7F7F7"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/logoImg"
+        android:gravity="center"
+        android:width="200dp"
+        android:height="130dp" >
+        <bitmap
+            android:src="@drawable/texttutor_logo_latest"/>
+    </item>
+   <!-- <item
+        android:bottom="200dp"
+        android:gravity="bottom|center"
+        android:height="200dp">
+        <bitmap
+            android:src="@drawable/texttutor_logo"/>
+    </item>-->
+</layer-list>

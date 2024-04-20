@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">WitsClassProduct</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or">Or</string>
+    <string name="create_account">Create Account</string>
+    <string name="next">Next</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="submit">Submit</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="general_details">General Details</string>
+    <string name="name">Name</string>
+    <string name="select_state">Select state</string>
+    <string name="select_district">Select District</string>
+    <string name="id_proof">Id proof</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="parent_details">Finalize preferences</string>
+    <string name="father_mother_name">Father / Mother Name</string>
+    <string name="parent_contact_number">Parent Contact Number</string>
+    <string name="email">Email</string>
+    <string name="your_academic_level">Your academic level</string>
+    <string name="select_your_level">Select your level</string>
+    <string name="retry">Retry</string>
+    <string name="signing_in">Signing in..</string>
+    <string name="creating_account">Creating account..</string>
+    <string name="updating_profile">Updating profile..</string>
+    <string name="ask_any_doubts_or_concerns">Please take a moment to share your thoughts and experiences with us, as it helps us improve our services and better meet your needs.</string>
+    <string name="get_direct_support_through_whatsapp">Get direct support through whatsapp</string>
+    <string name="chat_now">Chat now</string>
+    <string name="update">Update</string>
+    <string name="subjects">Subjects</string>
+    <string name="selected_academic_level">Selected academic level:</string>
+    <string name="explore_subjects_of_class">Explore subjects of PLUS TWO</string>
+    <string name="news_and_events">News and Events</string>
+    <string name="fetching_profile">Fetching profile..</string>
+    <string name="fetching_chapters">Fetching chapters..</string>
+    <string name="fetching_topics">Fetching topics..</string>
+    <string name="fetching_demo_videos">Fetching demo videos..</string>
+    <string name="fetching_analytics">Fetching analytics..</string>
+    <string name="fetching_news_events">Fetching News &amp; Events..</string>
+    <string name="fetching_job_updates">Fetching Job Updates..</string>
+    <string name="fetching_job_updates_details">Fetching Job Updates details</string>
+    <string name="fetching_subject">Fetching subject..</string>
+    <string name="fetching_batch">Fetching batch..</string>
+    <string name="fetching_classes">Fetching class..</string>
+    <string name="fetching_recent">Fetching recently watched..</string>
+    <string name="submitting_query">Submitting your query..</string>
+    <string name="chapters">Select Chapter</string>
+    <string name="topics">Topics</string>
+    <string name="sign_out">Sign out</string>
+    <string name="no_data">No items to display</string>
+    <string name="please_wait">Please wait..</string>
+
+    //Title
+    <string name="title_home">Home</string>
+    <string name="title_recently_watched">Recently Watched</string>
+    <string name="title_profile_details">Profile Details</string>
+    <string name="title_help">App Feedback</string>
+    <string name="title_support">Support</string>
+
+    //Error
+    <string name="error_invalid_mobile_number">Please enter a valid Mobile Number</string>
+    <string name="error_enter_name">Please enter your name</string>
+    <string name="error_enter_parent_name">Please enter your parent name</string>
+    <string name="error_select_state">Please select your state</string>
+    <string name="error_select_district">Please select your district</string>
+    <string name="error_select_id">Please select an id proof</string>
+    <string name="error_select_avatar">Please select a profile pic</string>
+    <string name="error_email_id">Please enter an email id</string>
+    <string name="error_invalid_email">Please enter a valid email id</string>
+    <string name="error_message">Please add your doubts or concerns</string>
+    <string name="error_academic_level">Please select your academic level</string>
+    <string name="search">Search</string>
+    <string name="analytics_text">analytics</string>
+    <string name="make_part_payment_label"><u>Make part payment</u></string>
+    <string name="click_here_to_know_more_about_scholarship_redeem_details"><u>Click Here to know more about Scholarship Redeem details.</u></string>
+    <!--<string name="first_intro_text"><font color='#1F4495'><b>Education Redefined for You </b></font> \nExperience a personalized and adaptive learning journey with our app, tailored to your unique needs and goals</string>-->
+    <string name="first_intro_text">Transform your edu-tech business through wits class.</string>
+    <string name="second_intro_text">Through witsclass technology modules change the way of education. </string>
+
+
+</resources>
