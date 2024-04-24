@@ -77,8 +77,10 @@
     <string name="make_part_payment_label"><u>Make part payment</u></string>
     <string name="click_here_to_know_more_about_scholarship_redeem_details"><u>Click Here to know more about Scholarship Redeem details.</u></string>
     <!--<string name="first_intro_text"><font color='#1F4495'><b>Education Redefined for You </b></font> \nExperience a personalized and adaptive learning journey with our app, tailored to your unique needs and goals</string>-->
-    <string name="first_intro_text">Transform your edu-tech business through wits class.</string>
-    <string name="second_intro_text">Through witsclass technology modules change the way of education. </string>
+    <string name="first_intro_text">Welcome to Score, your trusted companion on the path to educational success. Here, we strive to empower you with knowledge and support to reach your goals. Join us on this exciting journey of growth and discovery</string>
+    <string name="second_intro_text">Empowering futures through knowledge; your journey to success starts here, whether it\'s mastering banking concepts, conquering PSC exams, or refining communicative English skills.</string>
+    <string name="you_have_succesfully_logged_in">You have succesfully logged in !</string>
+    <string name="gets_started">Gets Started</string>
 
 
 </resources>

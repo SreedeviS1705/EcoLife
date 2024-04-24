@@ -33,6 +33,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             android:id="@+id/textView61"
+            android:text="Quiz Created on date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -68,7 +69,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:visibility="gone"
+            android:visibility="visible"
             android:textSize="14sp"
             android:textColor="#0F8C05"
             android:id="@+id/textView62"

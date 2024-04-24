@@ -7,10 +7,11 @@
     tools:context=".OnBoardActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="55dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
         android:visibility="visible"
+        android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

@@ -19,12 +19,16 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="116dp"
-                android:layout_height="106dp"
+                android:layout_width="234dp"
+                android:layout_height="233dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginEnd="63dp"
                 android:layout_marginTop="40dp"
                 android:src="@drawable/ic_lock_profile"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +47,7 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -54,8 +59,9 @@
                 android:text="Enter your mobile number to login"
                 android:textColor="@color/grey_dark"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/textView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                android:fontFamily="@font/poppins"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/phoneErrorLayout"
@@ -67,8 +73,8 @@
                 android:background="@drawable/bg_edit_text"
                 android:paddingHorizontal="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView10">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5">
 
                 <ImageView
                     android:id="@+id/ccImage"
@@ -92,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins"
                     android:text="91"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/black" />
@@ -105,6 +112,7 @@
                     android:background="@color/white"
                     android:digits="0123456789"
                     android:ems="10"
+                    android:fontFamily="@font/poppins"
                     android:hint="@string/mobile_number"
                     android:inputType="phone"
                     android:maxLength="10"
@@ -122,7 +130,10 @@
                 android:paddingVertical="16dp"
                 android:text="Login"
                 app:cornerRadius="16dp"
-                android:backgroundTint="@color/button_bg"
+                android:textColor="@color/light_black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins"
+                android:backgroundTint="@color/button_bg_green"
                 app:layout_constraintEnd_toEndOf="@+id/phoneErrorLayout"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="@+id/phoneErrorLayout"
@@ -137,6 +148,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="@+id/next"
                 app:layout_constraintStart_toStartOf="@+id/next"
                 app:layout_constraintTop_toBottomOf="@+id/next" />
@@ -149,6 +161,7 @@
                 android:layout_marginBottom="20dp"
                 android:elevation="20dp"
                 app:cardCornerRadius="20dp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/next"
                 app:layout_constraintStart_toStartOf="@+id/next"

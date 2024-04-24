@@ -37,10 +37,12 @@
                 android:layout_marginEnd="15dp"
                 android:ellipsize="end"
                 android:lines="1"
+                android:text="Model Exam 1: English"
                 android:maxLines="1"
-                android:textColor="@color/black"
+                android:textColor="#554C4C"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/poppins"
                 app:layout_constraintBottom_toTopOf="@+id/subject_name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -51,7 +53,7 @@
 
             <TextView
                 android:id="@+id/subject_name"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
@@ -59,30 +61,32 @@
                 android:layout_marginBottom="10dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textColor="@color/black"
+                android:text="Exam Created on  "
+                android:textColor="#797A84"
+                android:fontFamily="@font/poppins"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name" />
 
             <TextView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/exam_created_on"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginEnd="15dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textColor="@color/black"
+                android:text="07/08/2022"
+                android:textColor="#797A84"
+                android:fontFamily="@font/poppins"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subject_name" />
+                app:layout_constraintStart_toEndOf="@id/subject_name"
+                app:layout_constraintTop_toTopOf="@id/subject_name" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/bottomContainer"
@@ -94,32 +98,31 @@
                 android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/subject_name"
                 app:layout_constraintTop_toBottomOf="@+id/exam_created_on">
 
                 <TextView
                     android:id="@+id/textView109"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Already attended"
-                    android:textColor="@color/grey_dark"
+                    android:text="Practice again"
+                    android:textColor="#F32827"
+                    android:fontFamily="@font/poppins"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView111"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView111"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="View My Result"
-                    android:textColor="@color/pass"
+                    android:textColor="#0DE109"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView110"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/textView109"
                     app:layout_constraintTop_toTopOf="parent" />
 

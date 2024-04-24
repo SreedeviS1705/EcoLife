@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- Set the solid color to gray -->
+    <solid android:color="#C8C8C8" />
+    <!-- Set corner radius to make it round -->
+    <corners android:radius="50dp" /> <!-- Adjust the radius as needed -->
+</shape>

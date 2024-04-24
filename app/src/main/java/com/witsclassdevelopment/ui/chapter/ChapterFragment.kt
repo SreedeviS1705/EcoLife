@@ -60,7 +60,7 @@ class ChapterFragment : BaseFragment(R.layout.fragment_chapter),IChapter {
     }
 
     override fun clickEvent(data: ChapterResponse.ChapterData) {
-        Log.d(TAG, "clickEvent: ")
+        Log.d(TAG, "clickEvent: "+redirectType)
         if(redirectType.equals("recordedClasses")) {
             val data = Bundle().apply {
                 putString("chapterId", data.chapterId)

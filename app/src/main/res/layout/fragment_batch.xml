@@ -21,6 +21,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
         android:id="@+id/titleContainer"
         android:layout_width="0dp"
         android:layout_height="50dp"

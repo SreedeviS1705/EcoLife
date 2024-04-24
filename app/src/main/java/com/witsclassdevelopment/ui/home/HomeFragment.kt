@@ -13,6 +13,7 @@ import android.text.Html
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.activityViewModels
@@ -66,10 +67,19 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
         val bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout> =
             BottomSheetBehavior.from(rootView!!)
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-        binding?.bottomSheet?.close?.setOnClickListener {
+        /*binding?.bottomSheet?.close?.setOnClickListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+        }*/
+        /*binding?.bottomSheet?.bottomSheetHome?.setOnClickListener {
+            //Home Click
         }
-
+        binding?.bottomSheet?.bottomSheetHistory?.setOnClickListener {
+            //Home Click
+        }
+        binding?.bottomSheet?.bottomSheetProfile?.setOnClickListener {
+            navigate(R.id.navigation_profile)
+        }
+*/
         val callback: OnBackPressedCallback =
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
@@ -137,33 +147,33 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             navigate(R.id.navigation_support)
         }
 
-        binding?.entrancePracticeId?.setOnClickListener {
+        /*binding?.entrancePracticeId?.setOnClickListener {
             if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.enteranceExamQuestionTypeFragment)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
             }
-        }
+        }*/
 
-        binding?.studyNotesId?.setOnClickListener {
+        /*binding?.studyNotesId?.setOnClickListener {
             if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.fragmentProbableQAGroup)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
             }
-        }
+        }*/
 
-        binding?.descriptiveQA?.setOnClickListener {
+        /*binding?.descriptiveQA?.setOnClickListener {
             if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.descriptQuestionAnsFragment)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
             }
         }
-
-        binding?.importantLinksId?.setOnClickListener {
+*/
+        /*binding?.importantLinksId?.setOnClickListener {
             navigate(R.id.fragmentImportantLinks)
-        }
+        }*/
 
         binding?.previousQuestionPaper?.setOnClickListener {
             navigate(R.id.fragmentPreviousyearQuestionPaper)
@@ -212,14 +222,14 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             navigate(R.id.allSubscriptionListFragment)
         }
 
-        binding?.scholershipId?.setOnClickListener {
-            /*if(subscriptionStatus?.compareTo("active") == 0) {
+        /*binding?.scholershipId?.setOnClickListener {
+            *//*if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.scholarshipExamsListFragment)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
-            }*/
+            }*//*
             navigate(R.id.scholarshipExamsListFragment)
-        }
+        }*/
 
         binding?.offerContainer?.setOnClickListener {
             /*val bundle = Bundle()
@@ -231,17 +241,17 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
         binding?.askDoubtId?.setOnClickListener {
             navigate(R.id.navigation_help)
         }
-        binding?.currentAffairsId?.setOnClickListener {
+        /*binding?.currentAffairsId?.setOnClickListener {
             navigate(R.id.currentAffairsFragment)
-        }
+        }*/
 
-        binding?.didYouKnowWhyCard?.setOnClickListener {
+        /*binding?.didYouKnowWhyCard?.setOnClickListener {
             if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.fragmentFlashCardGroup)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
             }
-        }
+        }*/
 
         /*binding?.jobUpdated?.setOnClickListener {
             navigate(R.id.navigation_help)
@@ -270,27 +280,27 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             navigate(R.id.newsEventFragment)
         }
 
-        binding?.jobUpdatesId?.setOnClickListener {
+        /*binding?.jobUpdatesId?.setOnClickListener {
             navigate(R.id.jobUpdateFragment)
-        }
-        binding?.analyticsId?.setOnClickListener {
+        }*/
+        /*binding?.analyticsId?.setOnClickListener {
             navigate(R.id.navigation_analytics)
-        }
-        binding?.paymentHistoryId?.setOnClickListener {
+        }*/
+        /*binding?.paymentHistoryId?.setOnClickListener {
             navigate(R.id.payment_history)
-        }
+        }*/
         binding?.profileHomeId?.setOnClickListener {
             navigate(R.id.navigation_profile)
         }
         binding?.supportHomeId?.setOnClickListener {
             navigate(R.id.navigation_support)
         }
-        binding?.subscriptionTenureSystemId?.setOnClickListener {
+        /*binding?.subscriptionTenureSystemId?.setOnClickListener {
             navigate(R.id.activeSubscriptionFragment)
-        }
-        binding?.switchAcadamicStreamId?.setOnClickListener {
+        }*/
+        /*binding?.switchAcadamicStreamId?.setOnClickListener {
             navigate(R.id.academicLevelsFragment)
-        }
+        }*/
 
         /*binding?.analyticsCard?.setOnClickListener {
             if(subscriptionStatus?.compareTo("ACTIVE") == 0) {

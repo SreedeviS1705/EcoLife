@@ -15,6 +15,7 @@
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,14 +23,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="75dp">
 
             <ImageView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/imageView20"
-                android:layout_width="75dp"
-                android:layout_height="65dp"
-                android:src="@drawable/topic_videos_ic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/video_cls_ic"
+                android:layout_marginStart="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -38,26 +40,27 @@
                 android:id="@+id/topicTextId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_marginEnd="2dp"
-                android:text=""
-                android:textColor="@color/black"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView19"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView20"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/imageView19"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
                 android:layout_marginEnd="7dp"
                 android:src="@drawable/topic_play_ic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

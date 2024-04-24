@@ -15,12 +15,13 @@
         android:layout_marginTop="46dp"
         android:textSize="18sp"
         android:textColor="@color/black"
-        android:text="Join Live Class:"
+        android:text="Live Class"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
         android:id="@+id/titleContainer"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -63,13 +64,19 @@
     <Button
         android:id="@+id/joinClassBtn"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:text="Join Class"
+        android:text="Join Live Session"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        android:textColor="@color/light_black"
+        android:fontFamily="@font/poppins"
+        android:backgroundTint="@color/button_bg_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
