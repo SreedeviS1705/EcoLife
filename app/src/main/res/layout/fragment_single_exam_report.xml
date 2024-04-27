@@ -17,24 +17,26 @@
 
         <TextView
             android:id="@+id/textView59"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#1F4495"
-            android:textSize="18sp"
+            android:textSize="@dimen/size_14_sp"
+            android:gravity="center"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView599"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/size_14_sp"
+            android:gravity="center"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView59" />

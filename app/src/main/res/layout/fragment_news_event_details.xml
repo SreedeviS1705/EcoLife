@@ -10,43 +10,63 @@
         android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:id="@+id/newsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/newsImageId"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
                 android:layout_marginTop="24dp"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/newsImageId"
-                android:layout_width="323dp"
-                android:layout_height="129dp"
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_12_sp"
+                android:id="@+id/newsTitleTopic"
+                android:layout_width="0dp"
+                android:text="@string/topic"
+                android:fontFamily="@font/poppins"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:scaleType="fitXY"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newsTitle" />
+                app:layout_constraintTop_toBottomOf="@id/newsImageId" />
+            <TextView
+                android:textColor="#808080"
+                android:textSize="@dimen/size_12_sp"
+                android:id="@+id/newsTitle"
+                android:layout_width="0dp"
+                android:fontFamily="@font/poppins"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/newsTitleTopic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/newsTitleTopic" />
+
+            <TextView
+                android:id="@+id/newsDetailsTopic"
+                android:layout_width="0dp"
+                android:text="@string/description_t"
+                android:textSize="@dimen/size_12_sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newsTitleTopic"/>
+
 
             <TextView
                 android:gravity="start"
                 android:id="@+id/newsDetails"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/grey_dark"
-                android:textSize="16sp"
+                android:textColor="#808080"
+                android:textSize="@dimen/size_12_sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newsImageId" />
+                app:layout_constraintTop_toBottomOf="@id/newsDetailsTopic" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

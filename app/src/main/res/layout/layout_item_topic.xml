@@ -1,59 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rootView"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/size_8_sp"
+    app:cardBackgroundColor="@color/psc_blue"
+    app:cardElevation="@dimen/size_12_sp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_height="wrap_content">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootView"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/size_15_sp">
 
-    <ImageView
-        android:id="@+id/thumbnail"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginHorizontal="16dp"
-        android:layout_toStartOf="@+id/cloud"
-        android:layout_toEndOf="@+id/thumbnail"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:lines="1"
-            android:maxLines="1"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:src="@drawable/video_cls_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="match_parent"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:textColor="@color/black" />
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_toStartOf="@+id/cloud"
+            android:layout_toEndOf="@+id/thumbnail"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/cloud"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_cloud_play"
-        tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white" />
 
-</RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chapter_arrow_icon"
+            tools:ignore="ContentDescription"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -4,16 +4,16 @@
    <!-- <item android:drawable="@drawable/bg_gradient"/>-->
     <item >
         <shape>
-            <solid android:color="#F7F7F7"/>
+            <solid android:color="@color/white"/>
         </shape>
     </item>
 
     <item android:id="@+id/logoImg"
         android:gravity="center"
         android:width="200dp"
-        android:height="130dp" >
+        android:height="200dp" >
         <bitmap
-            android:src="@drawable/texttutor_logo_latest"/>
+            android:src="@drawable/splash_image"/>
     </item>
    <!-- <item
         android:bottom="200dp"

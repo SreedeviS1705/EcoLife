@@ -20,20 +20,18 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp">
+            android:layout_marginStart="@dimen/size_20_sp"
+            android:layout_marginEnd="@dimen/size_20_sp">
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="234dp"
-                android:layout_height="233dp"
-                android:layout_marginStart="63dp"
-                android:layout_marginEnd="63dp"
-                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/ic_lock_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView10"
                 tools:ignore="NotSibling" />
 
 
@@ -57,9 +55,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:text="Enter your mobile number to login"
-                android:textColor="@color/grey_dark"
-                android:textSize="14sp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/size_12_sp"
                 android:fontFamily="@font/poppins"
+                android:lineHeight="@dimen/size_18_sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,9 +66,7 @@
                 android:id="@+id/phoneErrorLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/bg_edit_text"
                 android:paddingHorizontal="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,9 +96,11 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/poppins"
-                    android:text="91"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                    android:text="@string/_91"
+                    android:textSize="@dimen/size_12_sp"
+                    android:lineHeight="@dimen/size_18_sp"
+                    android:textColor="#595959"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/phone"
@@ -116,8 +115,11 @@
                     android:hint="@string/mobile_number"
                     android:inputType="phone"
                     android:maxLength="10"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/size_12_sp"
+                    android:lineHeight="@dimen/size_18_sp"
+                    android:textColor="#595959"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black"
                     tools:ignore="Autofill" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -129,7 +131,7 @@
                 android:layout_marginTop="30dp"
                 android:paddingVertical="16dp"
                 android:text="Login"
-                app:cornerRadius="16dp"
+                app:cornerRadius="@dimen/size_8_sp"
                 android:textColor="@color/light_black"
                 android:textAllCaps="false"
                 android:fontFamily="@font/poppins"

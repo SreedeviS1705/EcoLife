@@ -3,17 +3,17 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
-    id 'com.google.gms.google-services'
+//    id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    namespace 'com.witsclassdevelopment'
+    namespace 'com.scorepsc'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.witsclassdevelopment"
+        applicationId "com.scorepsc"
         minSdk 21
         targetSdk 33
         versionCode 3

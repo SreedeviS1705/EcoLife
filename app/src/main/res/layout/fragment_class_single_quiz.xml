@@ -13,14 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Quiz "
+        android:text="@string/quiz"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+  <!--  <TextView
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/quizQuestionRecyclerview"
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView59" />
+        app:layout_constraintTop_toBottomOf="@+id/textView58" />
 
     <TextView
         android:id="@+id/noQuizQuestionAvailableId"
@@ -72,14 +72,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/submitBtn"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="15dp"
         android:text="Submit"
+        android:textAllCaps="false"
+        android:textSize="@dimen/size_14_sp"
+        android:textColor="#0E0E0E"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

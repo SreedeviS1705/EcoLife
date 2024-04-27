@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WitsClassProduct</string>
+    <string name="app_name">Score Psc</string>
 
     <string name="welcome">Welcome</string>
     <string name="sign_in">Sign in</string>
@@ -47,7 +47,8 @@
     <string name="fetching_classes">Fetching class..</string>
     <string name="fetching_recent">Fetching recently watched..</string>
     <string name="submitting_query">Submitting your query..</string>
-    <string name="chapters">Select Chapter</string>
+    <string name="select_chapters">Select Chapter</string>
+    <string name="chapters">Chapters</string>
     <string name="topics">Topics</string>
     <string name="sign_out">Sign out</string>
     <string name="no_data">No items to display</string>
@@ -81,6 +82,36 @@
     <string name="second_intro_text">Empowering futures through knowledge; your journey to success starts here, whether it\'s mastering banking concepts, conquering PSC exams, or refining communicative English skills.</string>
     <string name="you_have_succesfully_logged_in">You have succesfully logged in !</string>
     <string name="gets_started">Gets Started</string>
+    <string name="_91">91</string>
+    <string name="library">Library</string>
+    <string name="live_class">Live Class</string>
+    <string name="recorded_class">Recorded Class</string>
+    <string name="examination">Examination</string>
+    <string name="faq">Faq</string>
+    <string name="explore_our_faq_section_for_quick_answers_optimizing_your_app_usage_experience">Explore our FAQ section for quick answers, optimizing your app usage experience.</string>
+    <string name="news_updates">News updates</string>
+    <string name="ask_doubt">Ask Doubt</string>
+    <string name="support">Support</string>
+    <string name="profile">Profile</string>
+    <string name="subject">Subject</string>
+    <string name="video_class">Video Class</string>
+    <string name="join_live_session">Join Live Session</string>
+    <string name="written_notes">Written notes</string>
+    <string name="quiz">Quiz</string>
+    <string name="_colon">:</string>
+    <string name="topic">Topic:\t</string>
+    <string name="date_t">Date:\t</string>
+    <string name="time_t">Time:\t</string>
+    <string name="description_t">Description:\t</string>
+    <string name="connect">Connect</string>
+    <string name="type_here">Type here...</string>
+    <string name="your_name">Your Name</string>
+    <string name="state">State</string>
+    <string name="district">District</string>
+    <string name="selected_course">Selected Course</string>
+    <string name="answer_key">Answer Key</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

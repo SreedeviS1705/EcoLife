@@ -9,16 +9,20 @@
 
     <TextView
         android:id="@+id/subject"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="@style/MainTitle"
         android:layout_margin="24dp"
-        android:textSize="18sp"
-        android:text="News &amp; Feeds"
+        android:textSize="@dimen/size_14_sp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/news_updates"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

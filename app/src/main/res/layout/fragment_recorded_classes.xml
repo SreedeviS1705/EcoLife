@@ -8,7 +8,7 @@
     tools:context=".ui.home.recordedClasses.RecordedClassesFragment">
 
     <ImageView
-        android:visibility="invisible"
+        android:visibility="gone"
         android:id="@+id/imageView8"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:visibility="gone"
         android:gravity="center_vertical"
         android:textStyle="bold"
         android:id="@+id/description"
@@ -34,6 +35,39 @@
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
+    <TextView
+        android:id="@+id/commonTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recorded_class"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/size_21_sp"
+        android:textSize="@dimen/size_14_sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/subject"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/size_18_sp"
+        android:textSize="@dimen/size_12_sp"
+        android:gravity="center"
+        android:textColor="#ADADAD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commonTitle" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -42,11 +76,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
     <include
         android:id="@+id/statusIndicatorLayout"
         layout="@layout/layout_status_indicator" />

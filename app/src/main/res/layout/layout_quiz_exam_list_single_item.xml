@@ -5,31 +5,50 @@
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginBottom="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/psc_blue"
     android:elevation="15dp"
     app:cardElevation="10dp"
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/black_border_bg"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_15_sp">
 
-        <TextView
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:id="@+id/textView60"
+        <ImageView
+            android:id="@+id/quizIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:src="@drawable/quiz_topic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:id="@+id/textView60"
+            android:text="question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/quizIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/quizArrow"/>
+        <ImageView
+            android:id="@+id/quizArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chapter_arrow_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white" />
+
+       <!-- <TextView
+            android:visibility="gone"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:id="@+id/textView61"
@@ -40,8 +59,9 @@
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView60" />
-
-        <TextView
+-->
+    <!--    <TextView
+            android:visibility="gone"
             android:textColor="@color/black"
             android:id="@+id/textView63"
             android:layout_width="wrap_content"
@@ -55,8 +75,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView61"
             app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
+-->
+    <!--    <TextView
             android:textStyle="bold"
             android:id="@+id/actionTextId"
             android:textSize="14sp"
@@ -67,8 +87,8 @@
             android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
+-->
+    <!--    <TextView
             android:visibility="visible"
             android:textSize="14sp"
             android:textColor="#0F8C05"
@@ -82,7 +102,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView63" />
-
+-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

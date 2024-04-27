@@ -14,6 +14,7 @@
         android:scaleX="0.8"
         android:scaleY="0.8"
         android:textSize="17sp"
+        android:buttonTint="@color/psc_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

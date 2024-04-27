@@ -6,17 +6,13 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:outlineAmbientShadowColor="@color/blue_200"
-        android:outlineSpotShadowColor="@color/blue_200"
         android:id="@+id/subjectContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginRight="13dp"
-        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +29,10 @@
                 android:layout_height="22dp"
                 android:layout_marginStart="10dp"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/subjectArrow"
                 app:layout_constraintStart_toEndOf="@+id/imageView19"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,6 +44,18 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/subjectArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chapter_arrow_icon"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toEndOf="@id/subjectTextId"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

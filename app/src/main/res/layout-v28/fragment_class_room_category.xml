@@ -19,13 +19,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:textStyle="bold"
         android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="5dp"
         android:textColor="#1F4495"
         android:textSize="18sp"
         android:singleLine="true"
@@ -40,6 +38,7 @@
         android:layout_height="112dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="12dp"
+        android:layout_marginTop="@dimen/size_15_sp"
         app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintEnd_toStartOf="@id/classNoteCategory"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +87,7 @@
         android:layout_height="112dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="12dp"
+        android:layout_marginTop="@dimen/size_15_sp"
         app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/videoClassCategory"
