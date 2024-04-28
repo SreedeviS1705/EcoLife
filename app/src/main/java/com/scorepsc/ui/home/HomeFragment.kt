@@ -2,6 +2,7 @@ package com.scorepsc.ui.home
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -136,11 +137,16 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
 
         //Examination
         binding?.ExaminationId?.setOnClickListener {
+            navigate(R.id.examFragment)
+
+           /* *//**
+             * For The apps those need Subscription option
+             *//*
             if(subscriptionStatus?.compareTo("active") == 0) {
                 navigate(R.id.examFragment)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
-            }
+            }*/
         }
 
         binding?.cardView7?.setOnClickListener {
@@ -200,6 +206,11 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
 
         //Library
         binding?.probableQuestionsId?.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("redirectType","studyMaterials")
+            navigate(R.id.recordedClassesSubjectFragment, bundle)
+
+        /*    // Subscription option
             if(subscriptionStatus?.compareTo("active") == 0) {
                 val bundle = Bundle()
                 bundle.putString("redirectType","studyMaterials")
@@ -207,18 +218,25 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
             }
-
+*/
         }
 
         //Recorded Class
         binding?.classRooms?.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("redirectType","recordedClasses")
+            navigate(R.id.recordedClassesSubjectFragment, bundle)
+
+           /* *//**
+             * For The apps those need Subscription option
+             *//*
             if(subscriptionStatus?.compareTo("active") == 0) {
                 val bundle = Bundle()
                 bundle.putString("redirectType","recordedClasses")
                 navigate(R.id.recordedClassesSubjectFragment, bundle)
             } else {
                 context?.let { it1 -> showAlertDialogButtonClicked(it1) }
-            }
+            }*/
         }
 
         binding?.cardView6?.setOnClickListener {
@@ -411,10 +429,16 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
     }
 
     override fun clickSliderItem(url: String) {
-        Log.d(TAG, "clickSliderItem:  $url")
-        val openURL = Intent(android.content.Intent.ACTION_VIEW)
-        openURL.data = Uri.parse(url)
-        startActivity(openURL)
+        try {
+            Log.d(TAG, "clickSliderItem:  $url")
+            val openURL = Intent(Intent.ACTION_VIEW,Uri.parse(url))
+          //  openURL.data = Uri.parse(url)
+            startActivity(openURL)
+        }catch (e : ActivityNotFoundException){
+            Log.e(TAG, "No activity found to handle the intent")
+
+        }
+
     }
 
     override fun clickEvent(obj: LatestUpdateResponse.Datum?) {

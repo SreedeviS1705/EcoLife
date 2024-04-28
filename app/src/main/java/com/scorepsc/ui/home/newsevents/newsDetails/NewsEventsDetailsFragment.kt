@@ -37,6 +37,7 @@ class NewsEventsDetailsFragment : BaseFragment(R.layout.fragment_news_event_deta
         }
         Picasso.get()
             .load(image)
+            .placeholder(R.drawable.gallery_placeholder)
             .into(binding?.newsImageId)
         binding
 

@@ -36,7 +36,7 @@ class NewsEventsAdapter(var mContext:INewsListener) :
     override fun onBindViewHolder(holder: SubjectViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
         holder.title.text = mList?.get(position)?.heading
-        Picasso.get().load(mList?.get(position)?.images).into(holder.imageView)
+        Picasso.get().load(mList?.get(position)?.images)?.placeholder(R.drawable.gallery_placeholder)?.into(holder.imageView)
         holder.container.setOnClickListener {
             mList?.get(position)?.let { it1 -> mContext.clickEvent(it1) }
         }

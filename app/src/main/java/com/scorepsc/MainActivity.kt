@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
                 findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_recent)
             }
             R.id.navigation_account -> {
-                findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_account)
+                findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_profile)
             }
             else -> {
                 Log.d("MainActivityyyyyyyyyy", "onNavigationItemSelected: else case")
