@@ -29,7 +29,11 @@ android {
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/devops/TEXTTUTOR/micros/Api/"'
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/TEXTTUTOR-MIGRATION/micros/Api/"'
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/TEXTTUTOR/micros/Api/"'
-            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
+
+            //WitsClass Devops Url
+        //    buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
+            //Score Psc Url
+            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/SCOREPSC/micros/Api/"'
         }
 
         release {
@@ -40,8 +44,10 @@ android {
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/devops/TEXTTUTOR/micros/Api/"'
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/TEXTTUTOR-MIGRATION/micros/Api/"'
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/TEXTTUTOR/micros/Api/"'
-            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
-            //minifyEnabled true
+            //WitsClass Devops Url
+        //    buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
+            //Score Psc Url
+            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/SCOREPSC/micros/Api/"'            //minifyEnabled true
             //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
