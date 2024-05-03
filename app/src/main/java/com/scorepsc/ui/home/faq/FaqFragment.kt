@@ -22,6 +22,13 @@ class FaqFragment : BaseFragment(R.layout.fragment_faq) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFaqBinding.bind(view)
+
+        binding?.faqWebView?.loadUrl("https://scoreexamsolution.com/faq.html")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding=null
     }
 
 }
