@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.scorepsc.ui.welcome.WelcomeFragment"
+        android:name="com.welkinwits.ui.welcome.WelcomeFragment"
         android:label="@string/welcome"
         tools:layout="@layout/fragment_welcome" />
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.scorepsc.ui.signin.SignInFragment"
+        android:name="com.welkinwits.ui.signin.SignInFragment"
         android:label="@string/sign_in"
         tools:layout="@layout/fragment_sign_in" >
 
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/verifyOTPFragment"
-        android:name="com.scorepsc.ui.verifyotp.VerifyOTPFragment"
+        android:name="com.welkinwits.ui.verifyotp.VerifyOTPFragment"
         android:label="@string/otp_verification"
         tools:layout="@layout/fragment_verify_otp" >
 
@@ -40,18 +40,18 @@
     </fragment>
     <fragment
         android:id="@+id/parentDetailsFragment"
-        android:name="com.scorepsc.ui.signup.ParentDetailsFragment"
+        android:name="com.welkinwits.ui.signup.ParentDetailsFragment"
         android:label="@string/create_account"
         tools:layout="@layout/fragment_general_details" />
     <fragment
         android:id="@+id/generalDetailFragment"
-        android:name="com.scorepsc.ui.signup.GeneralDetailFragment"
+        android:name="com.welkinwits.ui.signup.GeneralDetailFragment"
         android:label="@string/create_account"
         tools:layout="@layout/fragment_parent_details" />
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.scorepsc.ui.signup.GetStartFragment"
+        android:name="com.welkinwits.ui.signup.GetStartFragment"
         android:label="Get Started"
         tools:layout="@layout/get_start_fragment" />
 

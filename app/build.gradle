@@ -9,17 +9,26 @@ plugins {
 }
 
 android {
-    namespace 'com.scorepsc'
-    compileSdk 33
+    namespace 'com.welkinwits'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.scorepsc"
+        applicationId "com.welkinwits"
         minSdk 21
         targetSdk 33
-        versionCode 3
-        versionName "3.0"
+        versionCode 1
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("scorepsc/keystore/ScoreExamSolution.keystore")
+            storePassword "scoreexamsolution"
+            keyAlias "scoreexamsolution"
+            keyPassword "scoreexamsolution"
+        }
     }
 
     buildTypes {
@@ -37,6 +46,7 @@ android {
         }
 
         release {
+            signingConfig signingConfigs.release
 //            debuggable true
             //buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/NATIVESOUND/Api/"'
             //buildConfigField "String", "SERVER_URL", '"https://futureplusacademy.com/newtest/FUTUREPLUS/Api/"'
@@ -51,12 +61,24 @@ android {
             //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        scorepsc {
+            dimension "app"
+            applicationId "com.welkinwits.scoreexamsolution"
+            versionCode 2
+            versionName "1.0.2"
+        }
+    }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
