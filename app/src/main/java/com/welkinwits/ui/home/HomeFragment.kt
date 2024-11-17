@@ -32,6 +32,7 @@ import com.welkinwits.util.DataStoreManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import javax.inject.Inject
 
 
@@ -93,20 +94,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
 
-        val newsAdapter = NewsAdapter().apply {
-            onItemClick {
-                binding?.bottomSheet?.title?.text = it.heading
-                binding?.bottomSheet?.desc?.text =
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        Html.fromHtml(it.news, Html.FROM_HTML_MODE_COMPACT)
-                    } else {
-                        Html.fromHtml(it.news)
-                    }
-                binding?.bottomSheet?.thumbnail?.load(it.images)
-                bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-            }
-        }
-        binding?.newsRecyclerView?.adapter = newsAdapter
 
         homeViewModel.homeBannerResponse.observe(viewLifecycleOwner) {
             val bannerData : ArrayList<ImageBanner>? = it.data?.data?.imageBanners
@@ -131,27 +118,33 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             }
         }
 
-        homeViewModel.newsResponse.observe(viewLifecycleOwner) {
-            it.data?.data?.let(newsAdapter::submitList)
-        }
+//        homeViewModel.newsResponse.observe(viewLifecycleOwner) {
+//            it.data?.data?.let(newsAdapter::submitList)
+//        }
 
         //Examination
-        binding?.ExaminationId?.setOnClickListener {
-            navigate(R.id.examFragment)
-
-           /* *//**
-             * For The apps those need Subscription option
-             *//*
-            if(subscriptionStatus?.compareTo("active") == 0) {
-                navigate(R.id.examFragment)
-            } else {
-                context?.let { it1 -> showAlertDialogButtonClicked(it1) }
-            }*/
-        }
+//        binding?.ExaminationId?.setOnClickListener {
+//            navigate(R.id.examFragment)
+//
+//           /* *//**
+//             * For The apps those need Subscription option
+//             *//*
+//            if(subscriptionStatus?.compareTo("active") == 0) {
+//                navigate(R.id.examFragment)
+//            } else {
+//                context?.let { it1 -> showAlertDialogButtonClicked(it1) }
+//            }*/
+//        }
 
         binding?.cardView7?.setOnClickListener {
             navigate(R.id.navigation_support)
         }
+
+        binding?.wishHeading?.text = homeViewModel.getWishMessage()
+
+         homeViewModel.getUserName.observe(viewLifecycleOwner){
+             binding?.wishUser?.text = it
+         }
 
         /*binding?.entrancePracticeId?.setOnClickListener {
             if(subscriptionStatus?.compareTo("active") == 0) {
@@ -204,22 +197,36 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             navigate(R.id.subjectFragment, bundle)
         }
 
-        //Library
-        binding?.probableQuestionsId?.setOnClickListener {
+        //OffLine Class
+        binding?.offLineTrainingIdLayout?.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("redirectType","studyMaterials")
-            navigate(R.id.recordedClassesSubjectFragment, bundle)
-
-        /*    // Subscription option
-            if(subscriptionStatus?.compareTo("active") == 0) {
-                val bundle = Bundle()
-                bundle.putString("redirectType","studyMaterials")
-                navigate(R.id.recordedClassesSubjectFragment, bundle)
-            } else {
-                context?.let { it1 -> showAlertDialogButtonClicked(it1) }
-            }
-*/
+        //    bundle.putString("demoClass", "demoClass")
+            navigate(R.id.offLineTrainingFragment, bundle)
         }
+
+        //Gallery
+        binding?.galleryIdLayout?.setOnClickListener {
+            val bundle = Bundle()
+            //    bundle.putString("demoClass", "demoClass")
+            navigate(R.id.galleryFragment, bundle)
+        }
+
+        //Library
+//        binding?.probableQuestionsId?.setOnClickListener {
+//            val bundle = Bundle()
+//            bundle.putString("redirectType","studyMaterials")
+//            navigate(R.id.recordedClassesSubjectFragment, bundle)
+//
+//        /*    // Subscription option
+//            if(subscriptionStatus?.compareTo("active") == 0) {
+//                val bundle = Bundle()
+//                bundle.putString("redirectType","studyMaterials")
+//                navigate(R.id.recordedClassesSubjectFragment, bundle)
+//            } else {
+//                context?.let { it1 -> showAlertDialogButtonClicked(it1) }
+//            }
+//*/
+//        }
 
         //Recorded Class
         binding?.classRooms?.setOnClickListener {
@@ -260,13 +267,13 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
         }
 
         //Support
-        binding?.askDoubtId?.setOnClickListener {
-            navigate(R.id.navigation_help)
-        }
-
-        binding?.faqLayout?.setOnClickListener {
-            navigate(R.id.navigation_faq)
-        }
+//        binding?.askDoubtId?.setOnClickListener {
+//            navigate(R.id.navigation_help)
+//        }
+//
+//        binding?.faqLayout?.setOnClickListener {
+//            navigate(R.id.navigation_faq)
+//        }
         /*binding?.currentAffairsId?.setOnClickListener {
             navigate(R.id.currentAffairsFragment)
         }*/
@@ -317,9 +324,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
             navigate(R.id.payment_history)
         }*/
         //Profile
-        binding?.profileHomeId?.setOnClickListener {
-            navigate(R.id.navigation_profile)
-        }
+//        binding?.profileHomeId?.setOnClickListener {
+//            navigate(R.id.navigation_profile)
+//        }
         //Ask Doubt
         binding?.supportHomeId?.setOnClickListener {
             navigate(R.id.navigation_support)
@@ -411,6 +418,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),IHomeListing , IScroll
         homeViewModel.getHomeBanner()
         homeViewModel.getScrollUpdates()
         homeViewModel.getActiveSubscription()
+        homeViewModel.getUserName()
 
         binding?.homeContainer?.visibility = View.GONE
         binding?.homeProgressContainer?.visibility = View.VISIBLE

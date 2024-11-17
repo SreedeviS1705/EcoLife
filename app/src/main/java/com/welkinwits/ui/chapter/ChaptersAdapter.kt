@@ -38,16 +38,16 @@ class ChaptersAdapter(var mContext: IChapter,val context: Context?,var redirectT
         super.onBindViewHolder(holder, position)
         if(redirectType.equals("recordedClasses")) {
             holder.rootView.setCardBackgroundColor(ContextCompat.getColor(context!!,R.color.white))
-            holder.chapterIcon.visibility = View.GONE
-            holder.chapter.setTextColor(ContextCompat.getColor(context,R.color.psc_blue))
-            holder.chapterArrow.setColorFilter(R.color.black)
+            holder.chapterIcon.visibility = View.VISIBLE
+            holder.chapter.setTextColor(ContextCompat.getColor(context,R.color.black))
+            holder.chapterArrow.visibility = View.GONE
         }else{
             holder.rootView.setCardBackgroundColor(ContextCompat.getColor(context!!,R.color.psc_blue))
             holder.chapterIcon.visibility = View.VISIBLE
             holder.chapter.setTextColor(ContextCompat.getColor(context,R.color.white))
             holder.chapterArrow.setColorFilter(R.color.white)
         }
-        holder.chapter.text = "Chapter ${position+1} : "+ (mList?.get(position)?.chapterName ?: "")
+        holder.chapter.text = mList?.get(position)?.chapterName ?: ""
         holder.rootView.setOnClickListener {
             mList?.get(position)?.let { it1 -> mContext.clickEvent(it1) }
         }

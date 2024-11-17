@@ -32,7 +32,6 @@ class VerifyOTPFragment : BaseFragment(R.layout.fragment_verify_otp) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentVerifyOtpBinding.bind(view)
-        binding?.toolbar?.setNavigationOnClickListener { findNavController().popBackStack() }
 
         val otpRef = arguments?.getString("otpRef")
 
@@ -55,6 +54,8 @@ class VerifyOTPFragment : BaseFragment(R.layout.fragment_verify_otp) {
             var bundle = Bundle()
             bundle.putString("studId",it.data?.data?.studId)
             bundle.putString("token",it.data?.token)
+            Log.d(TAG, "onViewCreated: "+it.data?.data?.profile?.name)
+            bundle.putString("name",it.data?.data?.profile?.name)
             navigate(R.id.getStartedFragment, bundle)
 
             /*it.data?.data?.studId?.let { it1 ->

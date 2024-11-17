@@ -2,6 +2,8 @@ package com.welkinwits.ui.signin.onBoarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.welkinwits.OnBoardActivity
 import com.welkinwits.R
@@ -20,6 +22,13 @@ class OnBoardWelcomeSecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Remove notification bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
         binding = ActivityOnBoardingSecondWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

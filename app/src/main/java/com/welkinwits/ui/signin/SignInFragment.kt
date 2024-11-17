@@ -47,9 +47,9 @@ class SignInFragment : BaseFragment(R.layout.fragment_sign_in) {
                 doSignIn()
             }
         }
-        binding?.createAccount?.setOnClickListener {
-            navigate(R.id.generalDetailFragment)
-        }
+//        binding?.createAccount?.setOnClickListener {
+//            navigate(R.id.generalDetailFragment)
+//        }
 
         viewModel.signInResponse.observe(viewLifecycleOwner) {
             /*val data = Bundle().apply { putInt("otpRef", it.data?.data?.otpRef ?: -1) }

@@ -8,7 +8,6 @@
     tools:context=".ui.home.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
@@ -16,7 +15,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size_20_sp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:visibility="visible"
@@ -28,6 +28,41 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <TextView
+                    android:id="@+id/wish_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/size_20_sp"
+                    android:text="Goodmorning"
+                    android:textFontWeight="700"
+                    android:textColor="@color/eco_green"
+                    android:textSize="@dimen/size_20_sp"
+                    android:lineHeight="25dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/geologica"/>
+
+                <TextView
+                    android:id="@+id/wish_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20_sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/wish_heading"
+                    android:text="User"
+                    style="@style/CustomTitleContentTextViewStyle"
+                    android:textColor="@color/eco_green"/>
+                
+                <View
+                    android:id="@+id/wish_view"
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    app:layout_constraintTop_toBottomOf="@id/wish_user"
+                    android:background="#EEC800"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/size_20_sp"/>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/sliderContainer"
                     android:layout_width="match_parent"
@@ -35,7 +70,7 @@
                     android:layout_marginTop="@dimen/size_18_sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toBottomOf="@id/wish_view">
 
                     <com.github.islamkhsh.CardSliderViewPager
                         android:id="@+id/image_slider"
@@ -54,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         app:indicatorsToShow="5"
-                        app:indicatorColor="@color/psc_green"
+                        app:indicatorColor="@color/eco_green"
                         app:layout_constraintBottom_toBottomOf="@+id/image_slider"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -62,1352 +97,237 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout4"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sliderContainer">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout5"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/blue_circle_bg"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout6"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/library_img"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="@string/library"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/size_11_sp"
-                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
-                        app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout6"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/green_circle_bg"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout7"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.5">
-
-                        <ImageView
-                            android:layout_width="43dp"
-                            android:layout_height="43dp"
-                            android:src="@drawable/exam_img"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Exam"
-                        android:textColor="@color/black"
-                        android:textSize="10sp"
-                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
-                        app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
-                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout7"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/red_circle_bg"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout8"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/audio_book"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Audio Books"
-                        android:textColor="@color/black"
-                        android:textSize="10sp"
-                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
-                        app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
-                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout8"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/yellow_circle_bg"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <ImageView
-                            android:layout_width="38dp"
-                            android:layout_height="38dp"
-                            android:src="@drawable/analytics_img"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Analytics"
-                        android:textColor="@color/black"
-                        android:textSize="10sp"
-                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
-                        app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
-                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone"
-                    app:layout_collapseMode="parallax"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sliderContainer">
-
-
-                    <TextView
-                        android:id="@+id/explore"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="37dp"
-                        android:layout_marginTop="24dp"
-                        android:text="Dive into our services"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/subjectRecyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone"
-                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/explore"
-                        app:layout_constraintVertical_bias="0.0"
-                        app:spanCount="2" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="103dp"
-                        android:layout_height="35dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="@color/blue_700"
-                        android:text="See All"
-                        android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:visibility="gone"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/subjectRecyclerView">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/button_bg">
-
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="See All"
-                                android:textColor="@color/white"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
-
-                    <ImageView
-                        android:id="@+id/newsMenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="24dp"
-                        android:src="@drawable/ic_dots_menu"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@+id/news"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:text="@string/news_and_events"
-                        android:textAppearance="@style/MainTitle"
-                        app:layout_constraintBottom_toBottomOf="@+id/newsMenu"
-                        app:layout_constraintStart_toEndOf="@+id/newsMenu"
-                        app:layout_constraintTop_toTopOf="@+id/newsMenu" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/newsRecyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:orientation="vertical"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/news" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <!--<androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/featureContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/demoClass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="42dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toStartOf="@+id/liveClass"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/imageView8"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/demo_class"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:gravity="center"
-                                android:text="Demo Class"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/liveClass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="42dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toStartOf="@+id/studyMaterials"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/demoClass"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/liveClassLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView9"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/live_class"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:gravity="center"
-                                android:text="Live Class"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/studyMaterials"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="42dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/liveClass"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/studyMaterialLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView10"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/study_aterials"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:gravity="center"
-                                android:text="Study Materials"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/exams"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toStartOf="@+id/feePayment"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/ExamLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView12"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/exam"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:text="Exams"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/recordedClasses"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/feePayment"
-                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/RecordedClassLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView11"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/recorded_classes"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:gravity="center"
-                                android:text="Recorded Class"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/feePayment"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toStartOf="@+id/recordedClasses"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/exams"
-                        app:layout_constraintTop_toBottomOf="@+id/liveClass">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/FeeAndPaymentLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView13"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/fees_payment_ic"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:gravity="center"
-                                android:text="Fee &amp; Payment"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/jobUpdated"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toStartOf="@+id/analyticsCard"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/imageView14"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/chat_ic"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:text="Quick support"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/newsFeeds"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/analyticsCard"
-                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/imageView15"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="29dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="30dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/newsfeeds"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:text="News/Feeds"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView15" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/analyticsCard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="29dp"
-                        android:layout_marginBottom="29dp"
-                        android:outlineAmbientShadowColor="@color/blue_200"
-                        android:outlineSpotShadowColor="@color/blue_200"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="12dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/newsFeeds"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@+id/jobUpdated"
-                        app:layout_constraintTop_toBottomOf="@+id/feePayment">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:minHeight="112dp">
-
-                            <ImageView
-                                android:id="@+id/AnalyticsLockIc"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:src="@drawable/home_feature_lock_ic"
-                                android:visibility="gone"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/imageView24"
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:layout_marginStart="2dp"
-                                android:layout_marginTop="22dp"
-                                android:layout_marginEnd="2dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/analytics_ic"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="15dp"
-                                android:text="Analytics"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/imageView24" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-                </androidx.constraintlayout.widget.ConstraintLayout>-->
-                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/featureContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/offerContainer">
-                    
-                    <FrameLayout
-                        android:id="@+id/liveClassContainerLayout"
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/live_class_bg_stroke"
+
+                    <TextView
+                        android:id="@+id/home_menu_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Our yoga coaching sessions"
+                        style="@style/CustomNormalContentTextViewStyle"
+                        android:textColor="@color/black"
+                        android:layout_marginHorizontal="50dp"
+                        android:layout_marginVertical="@dimen/size_10_sp"
+                        android:textAlignment="textStart"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/classRoomsLayout">
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/liveClassContainer"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="8dp"
-                            android:outlineAmbientShadowColor="@color/blue_200"
-                            android:outlineSpotShadowColor="@color/blue_200"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="12dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/classRoomsLayout">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <ImageView
-                                    android:id="@+id/liveClasssLockIc"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="1.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/liveClassimageView11"
-                                    android:layout_width="55dp"
-                                    android:layout_height="55dp"
-                                    android:layout_marginStart="2dp"
-                                    android:layout_marginTop="15dp"
-                                    android:layout_marginEnd="2dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/live_class_home_ic"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toTopOf="@id/liveClassText"/>
-                                <TextView
-                                    android:id="@+id/liveClassText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:gravity="center"
-                                    android:text="@string/live_class"
-                                    android:textColor="@color/black"
-                                    android:fontFamily="@font/poppins"
-                                    android:textSize="@dimen/size_14_sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/liveClassimageView11"
-                                    app:layout_constraintVertical_bias="1.0" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:id="@+id/classRoomsLayout"
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/liveClassContainer"
                         android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:background="@drawable/recorded_class_bg_stroke"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toEndOf="@id/liveClassContainerLayout"
-                        app:layout_constraintTop_toTopOf="@id/liveClassContainerLayout">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/classRooms"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="8dp"
-                            android:outlineAmbientShadowColor="@color/blue_200"
-                            android:outlineSpotShadowColor="@color/blue_200"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="12dp">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <ImageView
-                                    android:id="@+id/classRoomLockIc"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="1.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/RecordedClassLockIc"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/imageView11"
-                                    android:layout_width="55dp"
-                                    android:layout_height="55dp"
-                                    android:layout_marginStart="2dp"
-                                    android:layout_marginTop="15dp"
-                                    android:layout_marginEnd="2dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/class_room_ic"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toTopOf="@id/recordedClassText"/>
-                                <TextView
-                                    android:id="@+id/recordedClassText"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:gravity="center"
-                                    android:text="@string/recorded_class"
-                                    android:textColor="@color/black"
-                                    android:textSize="@dimen/size_14_sp"
-                                    android:fontFamily="@font/poppins"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </FrameLayout>
-
-
-                    <FrameLayout
-                        android:id="@+id/probableQuestionsIdLayout"
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:background="@drawable/library_bg_stroke"
-                        app:layout_constraintEnd_toStartOf="@id/ExaminationIdLayout"
+                        android:layout_height="145dp"
+                        android:paddingTop="20dp"
+                        android:layout_margin="@dimen/size_10_sp"
+                        android:src="@drawable/live_class_bg_stroke"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:backgroundTint="@color/white"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/liveClassContainerLayout">
+                        app:layout_constraintTop_toBottomOf="@id/home_menu_title"
+                        app:layout_constraintEnd_toStartOf="@id/classRooms">
 
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/probableQuestionsId"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="8dp"
-                            android:outlineAmbientShadowColor="@color/blue_200"
-                            android:outlineSpotShadowColor="@color/blue_200"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="12dp">
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <ImageView
-                                    android:id="@+id/studyNotessLockIc"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="1.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/probableQuestionsLockIc"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/probableQuestionsimageView11"
-                                    android:layout_width="55dp"
-                                    android:layout_height="58dp"
-                                    android:layout_marginStart="2dp"
-                                    android:layout_marginTop="15dp"
-                                    android:layout_marginEnd="2dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/probable_qestions_ic"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintBottom_toTopOf="@id/libraryText"/>
-                                <TextView
-                                    android:id="@+id/libraryText"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:gravity="center"
-                                    android:text="@string/library"
-                                    android:textColor="@color/black"
-                                    android:textSize="@dimen/size_14_sp"
-                                    android:fontFamily="@font/poppins"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/probableQuestionsimageView11"
-                                    app:layout_constraintVertical_bias="1.0" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.google.android.material.card.MaterialCardView>
+                    </androidx.appcompat.widget.AppCompatImageButton>
 
-                    </FrameLayout>
-                    
-                    <FrameLayout
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/classRooms"
                         android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:id="@+id/ExaminationIdLayout"
-                        android:background="@drawable/examination_bg_stroke"
+                        android:layout_height="145dp"
+                        android:src="@drawable/recorded_class_bg_stroke"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:backgroundTint="@color/white"
+                        android:layout_margin="@dimen/size_10_sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/probableQuestionsIdLayout"
-                        app:layout_constraintTop_toTopOf="@id/probableQuestionsIdLayout">
+                        app:layout_constraintStart_toEndOf="@id/liveClassContainer"
+                        app:layout_constraintTop_toBottomOf="@id/home_menu_title">
 
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/ExaminationId"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="8dp"
-                            android:outlineAmbientShadowColor="@color/blue_200"
-                            android:outlineSpotShadowColor="@color/blue_200"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="12dp">
+                    </androidx.appcompat.widget.AppCompatImageButton>
 
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-                                <ImageView
-                                    android:id="@+id/examinationLockIc"
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="1.0"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/ExaminationIdLockIc"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:src="@drawable/home_feature_lock_ic"
-                                    android:visibility="gone"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <ImageView
-                                    android:id="@+id/ExaminationIdimageView11"
-                                    android:layout_width="55dp"
-                                    android:layout_height="58dp"
-                                    android:layout_marginStart="2dp"
-                                    android:layout_marginTop="15dp"
-                                    android:layout_marginEnd="2dp"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/exam_iccc"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:gravity="center"
-                                    android:text="@string/examination"
-                                    android:textColor="@color/black"
-                                    android:textSize="@dimen/size_14_sp"
-                                    android:fontFamily="@font/poppins"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/ExaminationIdimageView11"
-                                    app:layout_constraintVertical_bias="1.0" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-                        </com.google.android.material.card.MaterialCardView>
-                    </FrameLayout>
 
-                    
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:id="@+id/faqLayout"
-                        android:clickable="true"
-                        app:layout_constraintStart_toStartOf="@id/probableQuestionsIdLayout"
-                        app:layout_constraintEnd_toEndOf="@id/ExaminationIdLayout"
-                        app:layout_constraintTop_toBottomOf="@id/probableQuestionsIdLayout">
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/faqIcon"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:layout_margin="8dp"
-                            app:cardBackgroundColor="#0055A3"
-                            app:cardCornerRadius="8dp">
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/faq_icon"/>
-                        </com.google.android.material.card.MaterialCardView>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins"
-                                android:textFontWeight="500"
-                                android:textSize="@dimen/size_14_sp"
-                                android:text="@string/faq"
-                                android:gravity="center_vertical"
-                                android:textColor="@color/black"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins"
-                                android:textFontWeight="400"
-                                android:textSize="@dimen/size_11_sp"
-                                android:text="@string/explore_our_faq_section_for_quick_answers_optimizing_your_app_usage_experience"
-                                android:gravity="center_vertical"
-                                android:textColor="#A1A1A1"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
-                        android:layout_marginTop="15dp"
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/offLineTrainingIdLayout"
+                        android:layout_width="140dp"
+                        android:layout_height="145dp"
+                        android:src="@drawable/offline_bg_stroke"
+                        android:backgroundTint="@color/white"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="@dimen/size_10_sp"
+                        app:layout_constraintEnd_toStartOf="@id/galleryIdLayout"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/liveClassContainer">
+
+                    </androidx.appcompat.widget.AppCompatImageButton>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/galleryIdLayout"
+                        android:layout_width="140dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="@dimen/size_10_sp"
+                        android:layout_marginTop="8dp"
+                        android:adjustViewBounds="true"
+                        android:backgroundTint="@color/white"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gallery_bg_stroke"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/faqLayout"
-                        app:layout_constraintBottom_toBottomOf="parent">
+                        app:layout_constraintStart_toEndOf="@+id/offLineTrainingIdLayout"
+                        app:layout_constraintTop_toBottomOf="@id/classRooms" />
+
+                    <View
+                            android:id="@+id/offline_view_one"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="@dimen/size_10_sp"
+                            app:layout_constraintEnd_toStartOf="@id/guid_one"
+                            app:layout_constraintTop_toBottomOf="@id/offLineTrainingIdLayout"
+                            android:background="@color/black"/>
 
                         <View
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="@dimen/size_10_sp"
+                            app:layout_constraintStart_toEndOf="@id/guid_one"
+                            app:layout_constraintTop_toBottomOf="@id/offLineTrainingIdLayout"
+                            android:background="@color/black"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guid_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent=".25"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="@dimen/size_10_sp"
+                        app:layout_constraintEnd_toStartOf="@id/guid_two"
+                        app:layout_constraintTop_toBottomOf="@id/galleryIdLayout"
+                        android:background="@color/black"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/size_10_sp"
+                        app:layout_constraintStart_toEndOf="@id/guid_two"
+                        app:layout_constraintTop_toBottomOf="@id/galleryIdLayout"
+                        android:background="@color/black"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guid_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent=".75"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/newAndEvents"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        app:cardBackgroundColor="@null"
+                        app:cardCornerRadius="8dp"
+                        app:layout_constraintStart_toStartOf="@id/offLineTrainingIdLayout"
+                        app:layout_constraintTop_toBottomOf="@id/offline_view_one"
+                        app:layout_constraintEnd_toEndOf="@id/galleryIdLayout">
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="#C8C8C8"
-                            android:layout_marginTop="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <View
-                            android:id="@+id/greDotOne"
-                            android:layout_width="5dp"
-                            android:layout_height="5dp"
-                            android:background="@drawable/gray_dots"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/greDotTwo"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <View
-                            android:id="@+id/greLineOne"
-                            android:layout_width="2dp"
-                            android:layout_height="28dp"
-                            android:background="#C8C8C8"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/greDotTwo"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/newAndEvents"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            app:cardBackgroundColor="#8DC73F"
-                            app:cardCornerRadius="8dp"
-                            android:layout_marginHorizontal="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/greDotTwo"
-                            app:layout_constraintTop_toBottomOf="@id/greLineOne">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/news_events_border">
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/newsEventImage"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/news_updates_icon"/>
-                        </com.google.android.material.card.MaterialCardView>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/news_updates"
-                            android:fontFamily="@font/poppins"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:layout_constraintStart_toStartOf="@id/newAndEvents"
-                            app:layout_constraintEnd_toEndOf="@id/newAndEvents"
-                            app:layout_constraintTop_toBottomOf="@id/newAndEvents"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
-                        <View
-                            android:id="@+id/greDotTwo"
-                            android:layout_width="5dp"
-                            android:layout_height="5dp"
-                            android:background="@drawable/gray_dots"
-                            app:layout_constraintStart_toEndOf="@id/greDotOne"
-                            app:layout_constraintEnd_toStartOf="@id/greDotThree"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <View
-                            android:id="@+id/greLineTwo"
-                            android:layout_width="2dp"
-                            android:layout_height="28dp"
-                            android:background="#C8C8C8"
-                            app:layout_constraintStart_toEndOf="@id/greDotOne"
-                            app:layout_constraintEnd_toStartOf="@id/greDotThree"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/supportHomeId"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            app:cardBackgroundColor="#02A89D"
-                            app:cardCornerRadius="8dp"
-                            android:layout_marginHorizontal="2dp"
-                            app:layout_constraintStart_toEndOf="@id/greDotOne"
-                            app:layout_constraintEnd_toStartOf="@id/greDotThree"
-                            app:layout_constraintTop_toBottomOf="@id/greLineTwo">
+                                android:src="@drawable/news_updates_icon"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/newsEventText"/>
+
+                            <TextView
+                                android:id="@+id/newsEventText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/news_updates"
+                                style="@style/CustomNormalContentTextViewStyle"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                app:layout_constraintStart_toEndOf="@id/newsEventImage"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:id="@+id/news_view_one"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="@dimen/size_10_sp"
+                        app:layout_constraintEnd_toStartOf="@id/guid_three"
+                        app:layout_constraintTop_toBottomOf="@id/newAndEvents"
+                        android:background="@color/black"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/size_10_sp"
+                        app:layout_constraintStart_toEndOf="@id/guid_three"
+                        app:layout_constraintTop_toBottomOf="@id/newAndEvents"
+                        android:background="@color/black"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guid_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent=".50"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/supportHomeId"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        app:cardBackgroundColor="@null"
+                        app:cardCornerRadius="8dp"
+                        app:layout_constraintStart_toStartOf="@id/newAndEvents"
+                        app:layout_constraintEnd_toEndOf="@id/newAndEvents"
+                        app:layout_constraintTop_toBottomOf="@id/news_view_one">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/support_border">
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/supportHomeImage"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
                                 android:layout_gravity="center"
-                                android:src="@drawable/ask_dbt_icon"/>
-                        </com.google.android.material.card.MaterialCardView>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ask_doubt"
-                            android:fontFamily="@font/poppins"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:layout_constraintStart_toStartOf="@id/supportHomeId"
-                            app:layout_constraintEnd_toEndOf="@id/supportHomeId"
-                            app:layout_constraintTop_toBottomOf="@id/supportHomeId"/>
-                        <View
-                            android:id="@+id/greDotThree"
-                            android:layout_width="5dp"
-                            android:layout_height="5dp"
-                            android:background="@drawable/gray_dots"
-                            app:layout_constraintStart_toEndOf="@id/greDotTwo"
-                            app:layout_constraintEnd_toStartOf="@id/greDotFour"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <View
-                            android:id="@+id/greLineThree"
-                            android:layout_width="2dp"
-                            android:layout_height="28dp"
-                            android:background="#C8C8C8"
-                            app:layout_constraintStart_toEndOf="@id/greDotTwo"
-                            app:layout_constraintEnd_toStartOf="@id/greDotFour"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/askDoubtId"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            app:cardBackgroundColor="#00ADEF"
-                            app:cardCornerRadius="8dp"
-                            android:layout_marginHorizontal="2dp"
-                            app:layout_constraintStart_toEndOf="@id/greDotTwo"
-                            app:layout_constraintEnd_toStartOf="@id/greDotFour"
-                            app:layout_constraintTop_toBottomOf="@id/greLineThree">
-                            <ImageView
-                                android:layout_width="wrap_content"
+                                android:src="@drawable/ask_dbt_icon"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/supportHomeText"/>
+                            <TextView
+                                android:id="@+id/supportHomeText"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/support_icon"/>
-                        </com.google.android.material.card.MaterialCardView>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/support"
-                            android:fontFamily="@font/poppins"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:layout_constraintStart_toStartOf="@id/askDoubtId"
-                            app:layout_constraintEnd_toEndOf="@id/askDoubtId"
-                            app:layout_constraintTop_toBottomOf="@id/askDoubtId"/>
-                        <View
-                            android:id="@+id/greDotFour"
-                            android:layout_width="5dp"
-                            android:layout_height="5dp"
-                            android:background="@drawable/gray_dots"
-                            app:layout_constraintStart_toEndOf="@id/greDotThree"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <View
-                            android:id="@+id/greLineFour"
-                            android:layout_width="2dp"
-                            android:layout_height="28dp"
-                            android:background="#C8C8C8"
-                            app:layout_constraintStart_toEndOf="@id/greDotThree"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/profileHomeId"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            app:cardBackgroundColor="#C29D6C"
-                            app:cardCornerRadius="8dp"
-                            android:layout_marginHorizontal="2dp"
-                            app:layout_constraintStart_toEndOf="@id/greDotThree"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/greLineFour">
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/profile_icon"/>
-                        </com.google.android.material.card.MaterialCardView>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/profile"
-                            android:fontFamily="@font/poppins"
-                            android:textSize="11sp"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@id/profileHomeId"
-                            app:layout_constraintEnd_toEndOf="@id/profileHomeId"
-                            app:layout_constraintTop_toBottomOf="@id/profileHomeId"/>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                android:text="@string/support"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                app:layout_constraintStart_toEndOf="@id/supportHomeImage"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.cardview.widget.CardView
@@ -1442,7 +362,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView345"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="40dp"
@@ -1652,7 +571,6 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:visibility="gone"
-                    android:id="@+id/constraintLayout12"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginLeft="10dp"

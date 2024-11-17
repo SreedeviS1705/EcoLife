@@ -7,14 +7,16 @@
         android:title="@string/title_home" />
 
     <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/title_profile_details" />
+
+    <item
         android:id="@+id/navigation_recent"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:title="@string/title_recently_watched" />
 
-    <item
-        android:id="@+id/navigation_account"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="@string/title_profile_details" />
+
 
     <!--<item
         android:id="@+id/navigation_help"

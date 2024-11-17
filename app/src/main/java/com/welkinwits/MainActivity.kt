@@ -96,13 +96,18 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
         arguments: Bundle?
     ) {
         Log.d("MainActivityyyyyyyyyy", "onDestinationChanged: ")
-        if (R.id.payment_success_screen == destination.id || R.id.payment_failed_screen == destination.id || R.id.quizSuccessFragment == destination.id || R.id.scholarshipStartExamFragment == destination.id) {
+        if (R.id.payment_success_screen == destination.id ||
+            R.id.payment_failed_screen == destination.id ||
+            R.id.quizSuccessFragment == destination.id ||
+            R.id.scholarshipStartExamFragment == destination.id) {
             binding?.toolbar?.visibility = View.GONE
         } else {
             binding?.toolbar?.visibility = View.VISIBLE
         }
 
-        if (destination.id == R.id.navigation_home) {
+        if (destination.id == R.id.navigation_home ||
+            destination.id == R.id.navigation_profile ||
+            destination.id == R.id.navigation_recent ) {
             binding.navView.visibility = View.VISIBLE
         } else {
             binding.navView.visibility = View.GONE

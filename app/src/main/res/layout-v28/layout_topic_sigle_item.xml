@@ -10,12 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginRight="13dp"
         app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,10 +23,9 @@
             <ImageView
                 android:visibility="visible"
                 android:id="@+id/imageView20"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/video_cls_ic"
-                android:layout_marginStart="25dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/chapter_ic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,18 +34,18 @@
                 android:id="@+id/topicTextId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_marginStart="25dp"
-                android:fontFamily="@font/poppins"
-                android:textColor="@color/white"
-                android:textSize="14sp"
+                style="@style/CustomSubTitleContentTextViewStyle"
+                android:textColor="@color/black"
+                android:text="@string/topic"
+                android:textAlignment="textStart"
+                android:layout_marginStart="@dimen/size_10_sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView19"
                 app:layout_constraintStart_toEndOf="@id/imageView20"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:id="@+id/imageView19"
                 android:layout_width="24dp"
                 android:layout_height="26dp"
@@ -63,7 +57,12 @@
                 app:tint="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:backgroundTint="#B8B8B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topicContainer"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

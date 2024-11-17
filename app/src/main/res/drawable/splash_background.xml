@@ -8,7 +8,7 @@
         </shape>
     </item>
 
-    <item android:id="@+id/logoImg"
+    <item
         android:gravity="center"
         android:width="200dp"
         android:height="200dp" >

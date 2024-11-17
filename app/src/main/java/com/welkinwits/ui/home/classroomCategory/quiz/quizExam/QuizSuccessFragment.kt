@@ -51,7 +51,7 @@ class QuizSuccessFragment : BaseFragment(R.layout.fragment_quiz_success) {
             binding?.scoreId?.setTextColor(resources.getColor(R.color.fail))
             binding?.imageView14?.setImageDrawable(activity?.let { ContextCompat.getDrawable(it, R.drawable.cancel_ic) });
         } else {
-            binding?.scoreId?.setTextColor(resources.getColor(R.color.psc_green))
+            binding?.scoreId?.setTextColor(resources.getColor(R.color.eco_green))
             binding?.imageView14?.setImageDrawable(activity?.let { ContextCompat.getDrawable(it, R.drawable.tick_ic) });
         }
 

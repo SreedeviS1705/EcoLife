@@ -23,6 +23,7 @@ class GetStartFragment : BaseFragment(R.layout.get_start_fragment) {
     }
     private var studId: String?= null
     private var token: String?= null
+    private var profile: String?= null
 
 
     private var binding: GetStartFragmentBinding? = null
@@ -36,6 +37,7 @@ class GetStartFragment : BaseFragment(R.layout.get_start_fragment) {
 
             studId = requireArguments().getString("studId")
             token = requireArguments().getString("token")
+            profile = requireArguments().getString("name")
         }
         binding = GetStartFragmentBinding.bind(view)
         binding?.toolbar?.setNavigationOnClickListener { findNavController().popBackStack() }
@@ -44,6 +46,7 @@ class GetStartFragment : BaseFragment(R.layout.get_start_fragment) {
             GlobalScope.launch {
                 studId?.let { it1 -> dataStoreManager?.setStudId(it1) }
                 token?.let { it1 -> dataStoreManager?.setToken(it1) }
+                profile?.let { it1 -> dataStoreManager?.setStudName(it1) }
             }
 
             startActivity(Intent(requireContext(), MainActivity::class.java))

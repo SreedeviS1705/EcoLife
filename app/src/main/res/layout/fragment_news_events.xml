@@ -11,15 +11,22 @@
         android:id="@+id/subject"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/MainTitle"
-        android:layout_margin="24dp"
-        android:textSize="@dimen/size_14_sp"
-        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/CustomSubTitleContentTextViewStyle"
         android:text="@string/news_updates"
         android:gravity="center"
+        android:textColor="@color/eco_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/commonTitleView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/eco_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subject"/>
 
     <com.google.android.material.button.MaterialButton
         android:visibility="gone"

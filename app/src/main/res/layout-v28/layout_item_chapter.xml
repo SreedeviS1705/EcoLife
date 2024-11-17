@@ -10,24 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="12dp"
-        app:cardUseCompatPadding="true"
         app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10_sp">
 
             <ImageView
                 android:id="@+id/chapterIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/library_icon"
-                android:layout_margin="10dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/chapter_ic"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
@@ -38,9 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Topic 1"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                style="@style/CustomSubTitleContentTextViewStyle"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/chapterArrow"
@@ -59,7 +55,11 @@
                 app:tint="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rootView"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
+import com.welkinwits.R
 import com.welkinwits.databinding.LayoutItemTopicBinding
 import com.welkinwits.service.respose.TopicResponse
 
@@ -40,11 +41,11 @@ class TopicAdapter :
 
     override fun onBindViewHolder(holder: TopicViewHolder, position: Int) {
         val item = getItem(position)
-        holder.binding.title.text = "Topic ${position+1}"
-        holder.binding.desc.text = item.topicName
+        holder.binding.title.text = item.topicName
+       // holder.binding.desc.text = item.topicName
         holder.binding.thumbnail.load(item.thumbnail) {
             crossfade(true)
-            placeholder(ColorDrawable(Color.LTGRAY))
+            placeholder(R.drawable.video_cls_ic)
             error(ColorDrawable(Color.LTGRAY))
             transformations(RoundedCornersTransformation(8f))
         }

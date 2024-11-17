@@ -23,19 +23,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textSize="@dimen/size_14_sp"
-        android:lineHeight="@dimen/size_21_sp"
-        android:fontFamily="@font/poppins"
-        android:textColor="#ADADAD"
-        android:text="@string/video_class"
+
+    <View
+        android:id="@+id/commonTitleView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/eco_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/commonTitle"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commonTitle"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17">
+        app:layout_constraintTop_toBottomOf="@+id/commonTitleView">
 
         <TextView
             android:id="@+id/batchName"
@@ -88,11 +84,8 @@
         android:layout_margin="50dp"
         android:text="@string/join_live_session"
         android:textAllCaps="false"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        style="@style/CustomSubTitleContentTextViewStyle"
         app:cornerRadius="8dp"
-        android:textColor="@color/light_black"
-        android:fontFamily="@font/poppins"
         android:backgroundTint="@color/button_bg_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

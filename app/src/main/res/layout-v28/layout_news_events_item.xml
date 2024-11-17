@@ -10,9 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="12dp"
-        app:cardUseCompatPadding="true"
         app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="@color/psc_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +24,11 @@
             <TextView
                 android:id="@+id/subjectTextId"
                 android:layout_width="0dp"
-                android:layout_height="22dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="14sp"
+                android:text="yoga"
+                android:textColor="@color/black"
+                style="@style/CustomSubTitleContentTextViewStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/subjectArrow"
                 app:layout_constraintStart_toEndOf="@+id/imageView19"
@@ -41,6 +39,8 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
+                android:src="@drawable/news_events_ic"
+                android:backgroundTint="@color/eco_green"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -58,7 +58,12 @@
                 app:tint="@color/white" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="#B8B8B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subjectContainer"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

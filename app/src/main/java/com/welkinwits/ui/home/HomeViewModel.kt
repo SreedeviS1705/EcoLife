@@ -18,7 +18,9 @@ import com.welkinwits.util.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import javax.inject.Inject
 
 @HiltViewModel
@@ -53,6 +55,9 @@ class HomeViewModel @Inject constructor(
 
     val getActiveSubscriptionResponse = _getActiveSubscriptionResponse
     val getActiveSubscriptionerrorMessage = _getActiveSubscriptionerrorMessage
+
+    private var _getUserName = MutableLiveData<String?>()
+    val getUserName = _getUserName
 
     fun getSubjects() {
         viewModelScope.launch {
@@ -176,6 +181,27 @@ class HomeViewModel @Inject constructor(
                 }
             }.collect()
         }
+    }
+
+    fun getWishMessage(): String {
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+
+        return when (hour) {
+            in 0..11 -> "Good morning"
+            in 12..17 -> "Good afternoon"
+            in 18..23 -> "Good evening"
+            else -> "Hello"
+        }
+    }
+
+     fun getUserName() {
+         viewModelScope.launch {
+             dataStoreManager.token.combine(dataStoreManager.name) { token, studName ->
+                 Log.d(TAG, "getUserName: "+studName)
+                 _getUserName.value = studName
+             }.collect()
+         }
     }
 
 }

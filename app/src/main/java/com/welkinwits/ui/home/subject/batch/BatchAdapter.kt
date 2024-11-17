@@ -34,15 +34,7 @@ class BatchAdapter(var mContext: IBatchListener) :
 
     override fun onBindViewHolder(holder: SubjectViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
-        // To make tile size of the card : square
-        holder.itemView.post {
-            val itemHeight = holder.itemView.height
-            val itemWidth = holder.itemView.width
-            // Set the calculated height to the GridLayout items
-            val layoutParams: ViewGroup.LayoutParams = holder.backgroundLayout.getLayoutParams()
-            layoutParams.height = itemWidth // Set width equal to height
-            holder.backgroundLayout .setLayoutParams(layoutParams)
-        }
+
         holder.subjectTitle.text = mList?.get(position)?.batchName
         holder.tutorNameId.text = mList?.get(position)?.tutorName
         holder.subjectContainer.setOnClickListener {

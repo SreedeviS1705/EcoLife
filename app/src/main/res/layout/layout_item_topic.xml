@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardUseCompatPadding="true"
     app:cardCornerRadius="@dimen/size_8_sp"
-    app:cardBackgroundColor="@color/psc_blue"
     app:cardElevation="@dimen/size_12_sp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -19,8 +17,8 @@
 
         <ImageView
             android:id="@+id/thumbnail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/video_cls_ic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,8 +41,10 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:maxLines="1"
-                android:fontFamily="@font/poppins"
-                android:textColor="@color/white"
+                android:text="video"
+                android:textAlignment="textStart"
+                style="@style/CustomNormalContentTextViewStyle"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <TextView
@@ -58,6 +58,7 @@
         </LinearLayout>
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/cloud"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

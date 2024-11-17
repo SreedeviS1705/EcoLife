@@ -11,9 +11,10 @@
         android:id="@+id/subjectContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardElevation="12dp"
+        app:cardElevation="2dp"
         app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/psc_blue"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,56 +28,66 @@
                 android:id="@+id/subjectTextId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/size_12_sp"
                 android:text="Batch 1"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:gravity="center"
+                android:textColor="@color/black"
+                style="@style/CustomSubTitleContentTextViewStyle"
                 android:layout_marginHorizontal="@dimen/size_15_sp"
-                android:fontFamily="@font/poppins"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView16"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView16"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/subjectSubTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="on live"
+                style="@style/CustomSmallContentTextViewStyle"
+                android:textColor="#7A7A7A"
+                app:drawableStartCompat="@drawable/on_live_ic"
+                android:gravity="center_vertical"
+                android:drawablePadding="8dp"
+                app:layout_constraintStart_toStartOf="@id/subjectTextId"
+                app:layout_constraintEnd_toEndOf="@id/subjectTextId"
+                app:layout_constraintTop_toBottomOf="@id/subjectTextId"/>
 
             <TextView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/tutorTextId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
                 android:text="Tutor : "
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subjectTextId" />
+                android:textAlignment="textEnd"
+                style="@style/CustomSmallContentTextViewStyle"
+                app:layout_constraintStart_toEndOf="@id/imageView16"
+                app:layout_constraintTop_toBottomOf="@+id/subjectSubTextId"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tutorNameId"/>
 
             <TextView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/tutorNameId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="4dp"
-                android:text=""
+                android:text="arun"
                 android:textColor="@color/grey_dark"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                android:textAlignment="textStart"
+                style="@style/CustomSmallContentTextViewStyle"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tutorTextId"
-                app:layout_constraintTop_toBottomOf="@+id/subjectTextId" />
+                app:layout_constraintTop_toBottomOf="@+id/subjectSubTextId"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <ImageView
                 android:id="@+id/imageView16"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="@dimen/size_12_sp"
-                android:src="@drawable/live_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/recorded_class_item_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/subjectTextId"/>
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

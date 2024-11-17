@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.offlineTraining.OfflineTrainingFragment">
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomTitleContentTextViewStyle"
+        android:text="@string/offline_training"
+        android:textStyle="bold"
+        android:textColor="@color/eco_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/commonTitleView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/eco_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView17"/>
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/splash_image"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commonTitleView"
+        app:layout_constraintBottom_toTopOf="@id/content_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:padding="@dimen/size_30_sp"
+        android:background="@drawable/offline_content_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_image"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/address_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/size_20_sp"
+            android:src="@drawable/oflline_address_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mobile_image"
+            app:layout_constraintEnd_toStartOf="@id/address_one"/>
+        <TextView
+            android:id="@+id/address_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ecolife"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            style="@style/CustomSubTitleContentTextViewStyle"
+            app:layout_constraintStart_toEndOf="@id/address_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/address_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Kochi, India"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:layout_marginStart="@dimen/size_20_sp"
+            style="@style/CustomSubTitleContentTextViewStyle"
+            app:layout_constraintStart_toEndOf="@id/address_image"
+            app:layout_constraintTop_toBottomOf="@id/address_one"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/address_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pin: 682020"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:layout_marginStart="@dimen/size_20_sp"
+            style="@style/CustomSubTitleContentTextViewStyle"
+            app:layout_constraintStart_toEndOf="@id/address_image"
+            app:layout_constraintTop_toBottomOf="@id/address_two"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/mobile_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/offline_mobile_ic"
+            android:layout_margin="@dimen/size_20_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_three"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/mobile_text"/>
+
+        <TextView
+            android:id="@+id/mobile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="090610 93666"
+            android:textColor="@color/black"
+            android:autoLink="phone"
+            style="@style/CustomSubTitleContentTextViewStyle"
+            app:layout_constraintStart_toEndOf="@id/mobile_image"
+            app:layout_constraintTop_toTopOf="@id/mobile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/mobile_image"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,12 @@ data class VerifyOTPResponse(
 ) : BaseResponse() {
     data class Data(
         @SerializedName("stud_id")
-        val studId: String
+        val studId: String,
+        @SerializedName("profile")
+        val profile: Profile
+    )
+    data class Profile(
+        @SerializedName("name")
+        val name : String
     )
 }

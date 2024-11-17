@@ -29,7 +29,7 @@ class ChapterFragment : BaseFragment(R.layout.fragment_chapter),IChapter {
         val subName = arguments?.getString("subName")
         redirectType = arguments?.getString("redirectType")
 
-        binding?.description?.text = "Chapters of $subName"
+        binding?.description?.text = subName
 
         binding?.statusIndicatorLayout?.root?.isVisible = true
         binding?.statusIndicatorLayout?.statusText?.text = getString(R.string.fetching_chapters)
@@ -62,12 +62,18 @@ class ChapterFragment : BaseFragment(R.layout.fragment_chapter),IChapter {
     override fun clickEvent(data: ChapterResponse.ChapterData) {
         Log.d(TAG, "clickEvent: "+redirectType)
         if(redirectType.equals("recordedClasses")) {
+            /*val data = Bundle().apply {
+                putString("chapterId", data.chapterId)
+                putString("chapterName", data.chapterName)
+                putString("subjectName", data.subjectName)
+            }
+            navigate(R.id.classRoomCategoryFragment, data)*/
             val data = Bundle().apply {
                 putString("chapterId", data.chapterId)
                 putString("chapterName", data.chapterName)
                 putString("subjectName", data.subjectName)
             }
-            navigate(R.id.classRoomCategoryFragment, data)
+            navigate(R.id.topicFragment, data)
         } else if(redirectType.equals("studyMaterials")) {
             val data = Bundle().apply {
                 putString("chapterId", data.chapterId)

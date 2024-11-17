@@ -10,52 +10,39 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size_40_sp"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_lock_profile_veriy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_20_sp"
+        android:layout_marginHorizontal="@dimen/size_20_sp"
         android:layout_marginTop="10dp"
         android:text="OTP"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="gone"
+        style="@style/CustomSubTitleContentTextViewStyle"
+        android:textColor="@color/eco_green"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="250dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="@dimen/size_20_sp"
-        android:layout_marginEnd="15dp"
-        android:text="Enter the  OTP code send to your registered mobile number "
+        android:layout_marginHorizontal="@dimen/size_20_sp"
+        android:text="@string/verify_otp_text"
         android:textColor="@color/grey_dark"
         android:textSize="12sp"
         android:fontFamily="@font/poppins"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7" />
 
     <com.mukesh.OtpView
         android:focusedByDefault="true"
@@ -76,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/submit"
@@ -86,10 +73,11 @@
         android:paddingVertical="16dp"
         android:text="@string/submit"
         app:cornerRadius="8dp"
-        android:textColor="@color/light_black"
         android:textAllCaps="false"
-        android:fontFamily="@font/poppins"
-        android:backgroundTint="@color/button_bg_green"        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/CustomSubTitleContentTextViewStyle"
+        android:backgroundTint="@color/button_bg_green"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resend" />

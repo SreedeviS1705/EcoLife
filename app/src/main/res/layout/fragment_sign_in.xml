@@ -7,207 +7,127 @@
     android:background="@color/white"
     tools:context=".ui.signin.SignInFragment">
 
-    <ScrollView
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="113dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_lock_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView9"
+        tools:ignore="NotSibling" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/CustomTitleContentTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/size_20_sp"
+        android:text="Login"
+        android:textColor="@color/eco_green"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/size_20_sp"
+        android:text="Enter your registered mobile number to login"
+        android:textColor="#878787"
+        style="@style/CustomNormalContentTextViewStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/phoneErrorLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_edit_text"
+        android:paddingHorizontal="12dp"
+        android:layout_marginHorizontal="@dimen/size_20_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <ImageView
+            android:id="@+id/ccImage"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:padding="8dp"
+            android:src="@drawable/ic_india"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/ccText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="@string/_91"
+            style="@style/CustomSmallContentTextViewStyle"
+            android:textColor="#BCBCBC"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/size_20_sp"
-            android:layout_marginEnd="@dimen/size_20_sp">
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:background="@color/white"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="@string/mobile_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:gravity="center_vertical"
+            android:textColor="#BCBCBC"
+            android:textColorHint="#BCBCBC"
+            android:textAlignment="textStart"
+            style="@style/CustomSmallContentTextViewStyle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="Autofill" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/ic_lock_profile"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView10"
-                tools:ignore="NotSibling" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:paddingVertical="16dp"
+        android:layout_marginVertical="@dimen/size_20_sp"
+        android:text="Login"
+        app:cornerRadius="@dimen/size_8_sp"
+        android:textAllCaps="false"
+        style="@style/CustomSubTitleContentTextViewStyle"
+        android:backgroundTint="@color/button_bg_green"
+        app:layout_constraintEnd_toEndOf="@+id/phoneErrorLayout"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/phoneErrorLayout"
+        app:layout_constraintTop_toBottomOf="@+id/phoneErrorLayout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Login"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Enter your mobile number to login"
-                android:textColor="#A3A3A3"
-                android:textSize="@dimen/size_12_sp"
-                android:fontFamily="@font/poppins"
-                android:lineHeight="@dimen/size_18_sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/phoneErrorLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_edit_text"
-                android:paddingHorizontal="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5">
-
-                <ImageView
-                    android:id="@+id/ccImage"
-                    android:layout_width="?actionBarSize"
-                    android:layout_height="?actionBarSize"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_india"
-                    tools:ignore="ContentDescription" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    android:id="@+id/ccText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/_91"
-                    android:textSize="@dimen/size_12_sp"
-                    android:lineHeight="@dimen/size_18_sp"
-                    android:textColor="#595959"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:background="@color/white"
-                    android:digits="0123456789"
-                    android:ems="10"
-                    android:fontFamily="@font/poppins"
-                    android:hint="@string/mobile_number"
-                    android:inputType="phone"
-                    android:maxLength="10"
-                    android:gravity="center_vertical"
-                    android:textSize="@dimen/size_12_sp"
-                    android:lineHeight="@dimen/size_18_sp"
-                    android:textColor="#595959"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    tools:ignore="Autofill" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/next"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:paddingVertical="16dp"
-                android:text="Login"
-                app:cornerRadius="@dimen/size_8_sp"
-                android:textColor="@color/light_black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins"
-                android:backgroundTint="@color/button_bg_green"
-                app:layout_constraintEnd_toEndOf="@+id/phoneErrorLayout"
-                app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toStartOf="@+id/phoneErrorLayout"
-                app:layout_constraintTop_toBottomOf="@+id/phoneErrorLayout" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="Or"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="@+id/next"
-                app:layout_constraintStart_toStartOf="@+id/next"
-                app:layout_constraintTop_toBottomOf="@+id/next" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/createAccount"
-                android:layout_width="0dp"
-                android:layout_height="63dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="20dp"
-                android:elevation="20dp"
-                app:cardCornerRadius="20dp"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/next"
-                app:layout_constraintStart_toStartOf="@+id/next"
-                app:layout_constraintTop_toBottomOf="@+id/textView11">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:src="@drawable/profile_new_admission"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView12"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintHorizontal_chainStyle="packed"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="SignUp"
-                        android:textColor="@color/button_bg"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/imageView7"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-
-            <include
-                android:id="@+id/statusIndicatorLayout"
-                layout="@layout/layout_status_indicator" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
+    <include
+        android:id="@+id/statusIndicatorLayout"
+        layout="@layout/layout_status_indicator" />
 
 
 

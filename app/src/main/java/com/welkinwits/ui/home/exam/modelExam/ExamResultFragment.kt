@@ -32,7 +32,7 @@ class ExamResultFragment : BaseFragment(R.layout.fragment_single_exam_result) {
             binding?.scoreMessageId?.setTextColor(resources.getColor(R.color.fail))
             binding?.imageView9?.setImageDrawable(activity?.let { ContextCompat.getDrawable(it, R.drawable.cancel_ic) })
         } else {
-            binding?.scoreMessageId?.setTextColor(resources.getColor(R.color.psc_green))
+            binding?.scoreMessageId?.setTextColor(resources.getColor(R.color.eco_green))
             binding?.imageView9?.setImageDrawable(activity?.let { ContextCompat.getDrawable(it, R.drawable.ic_tick) })
         }
 

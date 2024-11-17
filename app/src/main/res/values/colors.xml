@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_200">#8DC73F</color>
-    <color name="light_red">#F8B2A9</color>
-    <color name="blue_500">#8DC73F</color>
-    <color name="blue_700">#8DC73F</color>
-    <color name="teal_200">#8DC73F</color>
-    <color name="teal_700">#8DC73F</color>
+    <color name="blue_200">#00AD58</color>
+    <color name="blue_500">#BBBBBB</color>
+    <color name="blue_700">#00AD58</color>
+    <color name="teal_200">#00AD58</color>
+    <color name="teal_700">#00AD58</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#BBBBBB</color>
     <color name="grey_dark">#8F8F8F</color>
     <color name="grey_very_dark">#6A6A6A</color>
-    <color name="button_bg">#FFFFFFFF</color>
-    <color name="button_bg_green">#8DC73F</color>
-    <color name="text_color">#8DC73F</color>
-    <color name="text_blue">#8DC73F</color>
+    <color name="button_bg">#00AD58</color>
+    <color name="button_bg_green">#00AD58</color>
     <color name="text_green">#0F8C05</color>
     <color name="pass">#CDFACA</color>
     <color name="fail">#F61100</color>
     <color name="light_green">#36B19D</color>
-    <color name="light_black">#0E0E0E</color>
     <color name="psc_blue">#0055A3</color>
-    <color name="psc_green">#8DC73F</color>
+    <color name="eco_green">#00AD58</color>
 </resources>

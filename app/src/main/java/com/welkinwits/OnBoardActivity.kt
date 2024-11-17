@@ -3,6 +3,8 @@ package com.welkinwits
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import com.welkinwits.ui.base.BaseActivity
 import com.welkinwits.util.DataStoreManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,7 +22,14 @@ class OnBoardActivity : BaseActivity(R.layout.activity_onboard) {
     lateinit var dataStoreManager: DataStoreManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Remove notification bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         super.onCreate(savedInstanceState)
+
         Log.d(TAG, "onCreate: ")
         GlobalScope.launch {
             dataStoreManager.setOnBoardingStatus(true)

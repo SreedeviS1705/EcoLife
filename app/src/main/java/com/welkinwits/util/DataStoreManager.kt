@@ -17,6 +17,7 @@ private val Context.dataStore by preferencesDataStore("settings")
 class DataStoreManager @Inject constructor(@ApplicationContext appContext: Context) {
 
     private val STUD_ID = stringPreferencesKey("studId")
+    private val STUD_NAME = stringPreferencesKey("studName")
     private val TOKEN = stringPreferencesKey("token")
     private val ONBOAARDINGSTATUS = booleanPreferencesKey("onBoardingStatus")
 
@@ -30,6 +31,16 @@ class DataStoreManager @Inject constructor(@ApplicationContext appContext: Conte
 
     val studId: Flow<String?> = settingsDataStore.data.map { preferences ->
         preferences[STUD_ID]
+    }
+
+    suspend fun setStudName(studName: String) {
+        settingsDataStore.edit { settings ->
+            settings[STUD_NAME] = studName
+        }
+    }
+
+    val name : Flow<String?> = settingsDataStore.data.map { preferences ->
+        preferences[STUD_NAME]
     }
 
 

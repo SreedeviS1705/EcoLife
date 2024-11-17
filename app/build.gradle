@@ -42,7 +42,7 @@ android {
             //WitsClass Devops Url
         //    buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
             //Score Psc Url
-            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/SCOREPSC/micros/Api/"'
+            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/ECOLIFE/micros/Api/"'            //minifyEnabled true
         }
 
         release {
@@ -57,7 +57,7 @@ android {
             //WitsClass Devops Url
         //    buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/DEVOPS/micros/Api/"'
             //Score Psc Url
-            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/SCOREPSC/micros/Api/"'            //minifyEnabled true
+            buildConfigField "String", "SERVER_URL", '"https://app.witsclass.com/console/ECOLIFE/micros/Api/"'            //minifyEnabled true
             //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -65,11 +65,11 @@ android {
     flavorDimensions "app"
 
     productFlavors {
-        scorepsc {
+        ecolife {
             dimension "app"
-            applicationId "com.welkinwits.scoreexamsolution"
-            versionCode 2
-            versionName "1.0.2"
+            applicationId "com.ecolife"
+            versionCode 1
+            versionName "1.0.0"
         }
     }
 
@@ -96,6 +96,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics-ktx:18.3.2'
     implementation 'com.google.firebase:firebase-analytics-ktx:21.2.0'
     implementation 'com.google.firebase:firebase-messaging-ktx:23.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.5.6'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
